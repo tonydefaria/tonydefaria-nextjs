@@ -1,0 +1,18 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /components
+Disallow: /data
+Disallow: /layouts
+Disallow: /lib
+Disallow: /pages
+Disallow: /styles
+
+# Host
+Host: https://www.tonydefaria.com
+
+# Sitemaps
+Sitemap: https://www.tonydefaria.com/sitemap.xml
