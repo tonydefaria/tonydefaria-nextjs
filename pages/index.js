@@ -27,7 +27,7 @@ export default function Home({sectionData}) {
             <div>
               <figure>
                 <picture>
-                  <Image src={image.image} width={image.width} height={image.height} quality={100} priority={setPriority} sizes="50vw" style={css} alt={`Tony de Faria - Portrait - ${image.uid}`} title="Tony de Faria" />
+                  <Image src={image.image} width={image.width} height={image.height} quality={100} priority={setPriority} sizes="75vw" style={css} alt={`Tony de Faria - Portrait - ${image.uid}`} title="Tony de Faria" />
                 </picture>
                 <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
               </figure>
