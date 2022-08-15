@@ -3,6 +3,9 @@
 // Built-in Components
 import React, { useEffect } from "react"
 
+// Stylesheets
+import "../styles/composer.scss"
+
 export default function MyApp({ Component, pageProps}) {
   // Layout
   const Layout = Component.Layout ? Component.Layout : React.Fragment

@@ -4,37 +4,24 @@ import Primary from "../layouts/primary"
 // Built-in Components
 import Image from "next/future/image"
 
-// Styles
-const css = { width: "100%", height: "auto" }
-
 export default function Home({sectionData}) {
   // Props
-  const images = sectionData.section.blocks.filter(image => image.type_of === "image")
+  const hero = sectionData.section.blocks.find(({uid}) => uid === "wqq2dxdWkWsqRwjWAbiCEpbx")
 
   return (
     <div>
-      {images.map((image, index) => {
-
-        let setPriority
-        if (index <= 2) {
-          setPriority = true
-        } else {
-          setPriority = false
-        }
-
-        return (
-          <div key={image.uid}>
-            <div>
-              <figure>
-                <picture>
-                  <Image src={image.image} width={image.width} height={image.height} quality={100} priority={setPriority} sizes="60vw" style={css} alt={`Tony de Faria - Portrait - ${image.uid}`} title="Tony de Faria" />
-                </picture>
-                <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
-              </figure>
-            </div>
+      {/* Hero */}
+      <div className="intro">
+        <div className="intro-box">
+          <div className="intro-row">
+            <figure>
+              <picture>
+                <Image src={hero.image} width={hero.width} height={hero.height} quality={100} priority="true" sizes="70vw" alt={`Tony de Faria - Home - ${hero.uid}`} title="Tony de Faria" />
+              </picture>
+            </figure>
           </div>
-        )
-      })}
+        </div>
+      </div>
     </div>
   )
 }
@@ -49,7 +36,7 @@ export async function getStaticProps() {
   const projectData = await projectReq.json()
 
   // Section
-  const sectionUID = "ETawPaEzkHn3LqmnoZNkH7JE"
+  const sectionUID = "4MDntMTiDVcR9P8vUtvr2eKz"
   const sectionReq = await fetch(`${url}/mies/project/sections/${sectionUID}${token}`)
   const sectionData = await sectionReq.json()
 
