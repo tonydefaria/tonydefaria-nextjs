@@ -30,7 +30,7 @@ export default function Portraits({sectionData}) {
                     height={image.height}
                     quality={100}
                     priority={setPriority}
-                    sizes="75vw"
+                    sizes="70vw"
                     alt={`Tony de Faria - Portrait - ${image.uid}`}
                     title="Tony de Faria"
                   />
