@@ -4,7 +4,7 @@ import Primary from "../layouts/primary"
 // Built-in Components
 import Image from "next/future/image"
 
-export default function Home({sectionData}) {
+export default function Index({sectionData}) {
   // Props
   const hero = sectionData.section.blocks.find(({uid}) => uid === "wqq2dxdWkWsqRwjWAbiCEpbx")
 
@@ -22,7 +22,7 @@ export default function Home({sectionData}) {
                   height={hero.height}
                   quality={75}
                   priority="true"
-                  sizes="100vw"
+                  sizes="(max-width: 959px) 75vw, (min-width: 960px) 50vw, 100vw"
                   alt={`Tony de Faria - Home - ${hero.uid}`}
                   title="Tony de Faria"
                 />
@@ -66,4 +66,4 @@ export async function getStaticProps() {
   }
 }
 
-Home.Layout = Primary
+Index.Layout = Primary
