@@ -22,7 +22,7 @@ export default function Home({sectionData}) {
                   height={hero.height}
                   quality={100}
                   priority="true"
-                  sizes="100w"
+                  sizes="100vw"
                   alt={`Tony de Faria - Home - ${hero.uid}`}
                   title="Tony de Faria"
                 />

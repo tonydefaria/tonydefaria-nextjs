@@ -8,6 +8,7 @@ const nextConfig = {
       // minimumCacheTTL: 60,
       allowFutureImage: true,
       formats: ["image/avif", "image/webp"],
+      deviceSizes: [240, 360, 480, 640, 750, 828, 960, 1080, 1200, 1440, 1920, 2048, 3840],
     }
   },
   images: {
