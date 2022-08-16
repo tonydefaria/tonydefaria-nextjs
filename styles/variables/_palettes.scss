@@ -1,0 +1,47 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File: Palettes
+// -------------------------------------------------------------
+
+// Shadow (gray-900)
+// -------------------------------------------------------------
+$shadow: rgba(25, 25, 26, .1) !default;
+
+// White
+// -------------------------------------------------------------
+$white: #ffffff !default;
+
+// Black
+// -------------------------------------------------------------
+$black: #000000 !default;
+
+// Gray
+// -------------------------------------------------------------
+$gray-000: #fafafa !default;
+$gray-100: #e5e5e6 !default;
+$gray-200: #cacbce !default;
+$gray-300: #b0b2b5 !default;
+$gray-400: #95989d !default;
+$gray-500: #7b7e84 !default; // Primary
+$gray-600: #62656a !default;
+$gray-700: #4a4c4f !default; // Secondary
+$gray-800: #313235 !default;
+$gray-900: #19191a !default;
+
+// Gray Default
+$gray: $gray-500 !default;
+
+// Blue
+// -------------------------------------------------------------
+$blue-000: #f5f8fe !default; // Tertiary
+$blue-100: #cfdcfc !default;
+$blue-200: #9fb9f9 !default;
+$blue-300: #6f95f6 !default;
+$blue-400: #3f72f3 !default;
+$blue-500: #0f4ff0 !default; // Secondary
+$blue-600: #0c3fc0 !default;
+$blue-700: #092f90 !default;
+$blue-800: #062060 !default;
+$blue-900: #031030 !default; // Primary
+
+// Blue Default
+$blue: $blue-500 !default;

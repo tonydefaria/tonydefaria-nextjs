@@ -1,5 +1,5 @@
 // Layout
-import Primary from "../layouts/primary"
+import Layout from "../layouts/primary"
 
 // Built-in Components
 import Image from "next/future/image"
@@ -9,7 +9,7 @@ export default function Index({sectionData}) {
   const hero = sectionData.section.blocks.find(({uid}) => uid === "wqq2dxdWkWsqRwjWAbiCEpbx")
 
   return (
-    <div>
+    <Layout>
       {/* Hero */}
       <div className="intro">
         <div className="intro-box">
@@ -31,7 +31,7 @@ export default function Index({sectionData}) {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }
 
@@ -65,5 +65,3 @@ export async function getStaticProps() {
     }
   }
 }
-
-Index.Layout = Primary

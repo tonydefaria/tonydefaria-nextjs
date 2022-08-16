@@ -1,5 +1,5 @@
 // Layout
-import Primary from "../layouts/primary"
+import Layout from "../layouts/primary"
 
 // Built-in Components
 import Image from "next/future/image"
@@ -9,7 +9,7 @@ export default function Portraits({sectionData}) {
   const images = sectionData.section.blocks.filter(image => image.type_of === "image")
 
   return (
-    <div>
+    <Layout>
       {images.map((image, index) => {
 
         let setPriority
@@ -41,7 +41,7 @@ export default function Portraits({sectionData}) {
           </div>
         )
       })}
-    </div>
+    </Layout>
   )
 }
 
@@ -75,5 +75,3 @@ export async function getStaticProps() {
     }
   }
 }
-
-Portraits.Layout = Primary
