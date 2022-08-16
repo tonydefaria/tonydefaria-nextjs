@@ -20,7 +20,7 @@ export default function Home({sectionData}) {
                   src={hero.image}
                   width={hero.width}
                   height={hero.height}
-                  quality={100}
+                  quality={75}
                   priority="true"
                   sizes="100vw"
                   alt={`Tony de Faria - Home - ${hero.uid}`}
