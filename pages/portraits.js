@@ -24,7 +24,16 @@ export default function Portraits({sectionData}) {
             <div>
               <figure>
                 <picture>
-                  <Image src={image.image} width={image.width} height={image.height} quality={100} priority={setPriority} sizes="70vw" alt={`Tony de Faria - Portrait - ${image.uid}`} title="Tony de Faria" />
+                  <Image
+                    src={image.image}
+                    width={image.width}
+                    height={image.height}
+                    quality={100}
+                    priority={setPriority}
+                    sizes="(max-width: 959px;) 75vw, 100vw"
+                    alt={`Tony de Faria - Portrait - ${image.uid}`}
+                    title="Tony de Faria"
+                  />
                 </picture>
                 <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
               </figure>

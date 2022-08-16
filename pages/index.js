@@ -16,7 +16,16 @@ export default function Home({sectionData}) {
           <div className="intro-row">
             <figure>
               <picture>
-                <Image src={hero.image} width={hero.width} height={hero.height} quality={100} priority="true" sizes="70vw" alt={`Tony de Faria - Home - ${hero.uid}`} title="Tony de Faria" />
+                <Image
+                  src={hero.image}
+                  width={hero.width}
+                  height={hero.height}
+                  quality={100}
+                  priority="true"
+                  sizes="70vw"
+                  alt={`Tony de Faria - Home - ${hero.uid}`}
+                  title="Tony de Faria"
+                />
               </picture>
             </figure>
           </div>
