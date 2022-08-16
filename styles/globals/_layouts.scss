@@ -1,0 +1,95 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File: Layout
+// -------------------------------------------------------------
+
+.primary,
+.secondary,
+.tertiary {
+  float: left;
+  width: 100%;
+}
+
+.page {
+  float: left;
+  width: 100%;
+}
+
+.header,
+.main,
+.footer {
+  float: left;
+  max-width: 100%;
+  width: 100%;
+}
+
+.header {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background-color: rgba(250, 250, 250, .925);
+  left: 0;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.main {
+  min-height: calc(100vh - 368px);
+  padding: 144px 0 72px;
+}
+
+.footer {
+  padding: 0;
+}
+
+// Mobile
+// -------------------------------------------------------------
+@media #{$mobile} {
+  .main {
+    min-height: calc(100vh - 272px);
+    padding: 72px 0;
+  }
+  .footer {
+    padding: 0;
+  }
+}
+
+// Media Query 960px
+// -------------------------------------------------------------
+@media #{$l} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-row {
+      }
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+// Media Query 1440px
+// -------------------------------------------------------------
+@media #{$xl} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-row {
+      }
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+// Media Query 1920px
+// -------------------------------------------------------------
+@media #{$xxl} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-row {
+      }
+      .#{$class}-item {
+      }
+    }
+  }
+}

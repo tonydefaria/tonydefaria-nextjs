@@ -28,7 +28,8 @@ $gray-800: #313235 !default;
 $gray-900: #19191a !default;
 
 // Gray Default
-$gray: $gray-500 !default;
+$gray-primary: $gray-500 !default;
+$gray-secondary: $gray-700 !default;
 
 // Blue
 // -------------------------------------------------------------
@@ -44,4 +45,6 @@ $blue-800: #062060 !default;
 $blue-900: #031030 !default; // Primary
 
 // Blue Default
-$blue: $blue-500 !default;
+$blue-primary: $blue-900 !default;
+$blue-secondary: $blue-500 !default;
+$blue-tertiary: $blue-000 !default;

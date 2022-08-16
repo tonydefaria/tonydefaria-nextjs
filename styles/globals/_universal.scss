@@ -1,0 +1,72 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File: Universal
+// -------------------------------------------------------------
+
+$class: "universal";
+
+.#{$class} {
+  float: left;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  .#{$class}-box {
+    @include clearfix;
+    margin: 0 auto;
+    padding: 0;
+    .#{$class}-row {
+      float: left;
+      margin: 0 auto;
+      padding: 0;
+      position: relative;
+      width: 100%;
+    }
+  }
+}
+
+// Media Query 959px
+// -------------------------------------------------------------
+@media #{$mobile} {
+  .#{$class} {
+    .#{$class}-box {
+      max-width: 959px;
+      .#{$class}-row {
+      }
+    }
+  }
+}
+
+// Media Query 960px
+// -------------------------------------------------------------
+@media #{$l} {
+  .#{$class} {
+    .#{$class}-box {
+      width: 960px;
+      .#{$class}-row {
+      }
+    }
+  }
+}
+
+// Media Query 1440px
+// -------------------------------------------------------------
+@media #{$xl} {
+  .#{$class} {
+    .#{$class}-box {
+      width: 1200px;
+      .#{$class}-row {
+      }
+    }
+  }
+}
+
+// Media Query 1920px
+// -------------------------------------------------------------
+@media #{$xxl} {
+  .#{$class} {
+    .#{$class}-box {
+      width: 1200px;
+      .#{$class}-row {
+      }
+    }
+  }
+}

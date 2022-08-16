@@ -1,0 +1,108 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File: Typography
+// -------------------------------------------------------------
+
+.writer {
+  float: left;
+  width: 100%;
+
+  h1 { @include header-size-xxl; margin: 0 0 32px; }
+  h2 { @include header-size-xl; margin: 0 0 24px; }
+  h3 { @include header-size-l; margin: 0 0 20px; }
+  h4 { @include header-size-m; margin: 0 0 16px; }
+  h5 { @include header-size-s; margin: 0 0 14px; }
+  h6 { @include header-size-xs; margin: 0 0 12px; }
+
+  h1:first-child,
+  h2:first-child,
+  h3:first-child,
+  h4:first-child,
+  h5:first-child,
+  h6:first-child {
+    margin-top: 0;
+  }
+
+  h1:last-child,
+  h2:last-child,
+  h3:last-child,
+  h4:last-child,
+  h5:last-child,
+  h6:last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    @include font-size-m;
+    margin: 0 0 48px;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  ol,
+  ul {
+    list-style-position: inside;
+    margin: 0 0 48px;
+    li {
+      @include header-size-m;
+      float: left;
+      margin: 12px 0;
+      padding: 0;
+      width: 100%;
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  ol:last-child,
+  ul:last-child {
+    margin-bottom: 0;
+  }
+
+  ol { list-style-type: decimal; }
+  ul { list-style-type: disc; }
+
+  p,
+  li {
+    a {
+      display: inline;
+      float: none;
+      font-size: inherit;
+      font-weight: 900;
+      line-height: inherit;
+      margin: 0;
+      padding: 0;
+      text-decoration: underline;
+      vertical-align: bottom;
+    }
+  }
+}
+
+// Mobile
+// -------------------------------------------------------------
+@media #{$mobile} {
+  .writer {
+    h1 { margin: 0 0 24px; }
+    h2 { margin: 0 0 20px; }
+    h3 { margin: 0 0 16px; }
+    h4 { margin: 0 0 14px; }
+    h5 { margin: 0 0 12px; }
+    h6 { margin: 0 0 10px; }
+
+    p {
+      margin: 0 0 32px;
+    }
+
+    ol,
+    ul {
+      margin: 0 0 32px;
+      li {
+        margin: 8px 0;
+      }
+    }
+  }
+}

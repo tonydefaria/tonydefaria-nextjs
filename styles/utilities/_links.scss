@@ -1,0 +1,169 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File: Links
+// -------------------------------------------------------------
+
+@mixin link-default {
+  @include link-gray-blue;
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  display: block;
+  float: left;
+  font-weight: 900;
+  letter-spacing: .030em;
+  text-decoration: none;
+  width: auto;
+  &.hover-underline {
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+  span,
+  .icon {
+    display: block;
+    float: left;
+    line-height: inherit;
+    width: auto;
+    object,
+    img,
+    svg {
+      border: none;
+      float: left;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+@mixin link {
+  @include link-default;
+}
+
+@mixin link-s {
+  @include link-default;
+  @include font-size-s;
+  .icon {
+    height: 24px;
+    margin: 4px 0;
+    &.float-left { margin-right: 8px; }
+    &.float-right { margin-left: 8px; }
+    object,
+    img,
+    svg {
+      height: 24px;
+    }
+  }
+
+  // Mobile
+  // -------------------------------------------------------------
+  @media #{$mobile} {
+    .icon { margin: 0; }
+  }
+}
+
+@mixin link-m {
+  @include link-default;
+  @include font-size-m;
+  .icon {
+    height: 32px;
+    margin: 4px 0;
+    &.float-left { margin-right: 10px; }
+    &.float-right { margin-left: 10px; }
+    object,
+    img,
+    svg {
+      height: 32px;
+    }
+  }
+
+  // Mobile
+  // -------------------------------------------------------------
+  @media #{$mobile} {
+    .icon { margin: 0; }
+  }
+}
+
+@mixin link-l {
+  @include link-default;
+  @include font-size-l;
+  .icon {
+    height: 40px;
+    margin: 4px 0;
+    &.float-left { margin-right: 12px; }
+    &.float-right { margin-left: 12px; }
+    object,
+    img,
+    svg {
+      height: 40px;
+    }
+  }
+
+  // Mobile
+  // -------------------------------------------------------------
+  @media #{$mobile} {
+    .icon { margin: 0; }
+  }
+}
+
+// Link Colours
+
+@mixin link-gray {
+  color: $gray-900;
+  fill: $gray-900;
+  &:link,
+  &:visited {
+    color: $gray-900;
+    .icon { svg * { fill: $gray-900; } }
+  }
+  &:hover,
+  &:active {
+    color: $gray-900;
+    .icon { svg * { fill: $gray-900; } }
+  }
+}
+
+@mixin link-gray-blue {
+  color: $gray-900;
+  fill: $gray-900;
+  &:link,
+  &:visited {
+    color: $gray-900;
+    .icon { svg * { fill: $gray-900; } }
+  }
+  @media (hover: hover) {
+    &:hover,
+    &:active {
+      color: $blue-500;
+      .icon { svg * { fill: $blue-500; } }
+    }
+  }
+}
+
+@mixin link-blue-gray {
+  color: $blue-500;
+  fill: $blue-500;
+  &:link,
+  &:visited {
+    color: $blue-500;
+    .icon { svg * { fill: $blue-500; } }
+  }
+  @media (hover: hover) {
+    &:hover,
+    &:active {
+      color: $gray-900;
+      .icon { svg * { fill: $gray-900; } }
+    }
+  }
+}
+
+// Classes
+// -------------------------------------------------------------
+.link     { @include link; }
+.link-s   { @include link-s; }
+.link-m   { @include link-m; }
+.link-l   { @include link-l; }
+
+.link-gray      { @include link-gray; }
+.link-gray-blue { @include link-gray-blue; }
+.link-blue-gray { @include link-blue-gray; }
