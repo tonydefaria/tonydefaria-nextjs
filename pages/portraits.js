@@ -2,14 +2,28 @@
 import Layout from "../layouts/primary"
 
 // Built-in Components
+import React, { useEffect } from "react"
 import Image from "next/future/image"
 
-export default function Portraits({sectionData}) {
+// Components
+import MetaComponent from "../components/meta_component"
+
+export default function Portraits({projectData, sectionData}) {
   // Props
+  const meta = sectionData.section.meta_tag
+  const hero = sectionData.section.blocks.find(({uid}) => uid === "sHhk1Za3CSKpThi2X8eYDo1z")
   const images = sectionData.section.blocks.filter(image => image.type_of === "image")
+
+  // Effect
+  useEffect(() => {
+  }, [])
 
   return (
     <Layout>
+      {/* Meta */}
+      <MetaComponent projectData={projectData} meta={meta} />
+
+      {/* Portraits */}
       {images.map((image, index) => {
 
         let setPriority
@@ -46,17 +60,17 @@ export default function Portraits({sectionData}) {
 }
 
 export async function getStaticProps() {
-  // Hankyo Endpoint
+  // Endpoint
   const url = "https://hankyo-api-pro.herokuapp.com"
-  const token = "?hankyo_token=ZjiAAoU4XpdbuFqLqGTZPR1VmfucM7ya62TV2Dej3DUGMsAG"
 
   // Project
-  const projectReq = await fetch(`${url}/mies/project${token}`)
+  const projectToken = "ZjiAAoU4XpdbuFqLqGTZPR1VmfucM7ya62TV2Dej3DUGMsAG"
+  const projectReq = await fetch(`${url}/mies/project?project_token=${projectToken}`)
   const projectData = await projectReq.json()
 
   // Section
   const sectionUID = "ETawPaEzkHn3LqmnoZNkH7JE"
-  const sectionReq = await fetch(`${url}/mies/project/sections/${sectionUID}${token}`)
+  const sectionReq = await fetch(`${url}/mies/project/sections/${sectionUID}?project_token=${projectToken}`)
   const sectionData = await sectionReq.json()
 
   if (!projectData) {

@@ -2,14 +2,25 @@
 import Layout from "../layouts/primary"
 
 // Built-in Components
+import React, { useEffect } from "react"
 import Image from "next/future/image"
 
-export default function Index({sectionData}) {
+// Components
+import MetaComponent from "../components/meta_component"
+
+export default function Index({projectData, sectionData}) {
   // Props
+  const meta = sectionData.section.meta_tag
   const hero = sectionData.section.blocks.find(({uid}) => uid === "wqq2dxdWkWsqRwjWAbiCEpbx")
+
+  // Effect
+  useEffect(() => {
+  }, [])
 
   return (
     <Layout>
+      {/* Meta */}
+      <MetaComponent projectData={projectData} meta={meta} />
 
       {/* Hero */}
       <div className="intro">
@@ -32,73 +43,22 @@ export default function Index({sectionData}) {
           </div>
         </div>
       </div>
-
-      <h1>Excepteur sint occaecat</h1>
-      <hr className="separator-xl" />
-      <p>Ultricies lacus sed turpis tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Leo in vitae turpis massa sed elementum. Nullam eget felis <a href="#">eget</a> nunc lobortis mattis. Enim ut tellus elementum sagittis vitae et leo. Vel eros donec ac odio tempor. Ultrices dui sapien eget mi proin sed. Enim ut sem viverra aliquet eget sit amet tellus cras.</p>
-      <hr className="separator-xl" />
-      <a href="#" className="button-m">I am a link</a>
-      <hr className="separator-xxl" />
-      <div className="writer">
-        <h1>Excepteur sint occaecat</h1>
-        <p>Ultricies lacus sed turpis tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Leo in vitae turpis massa sed elementum. Nullam eget felis <a href="#">eget</a> nunc lobortis mattis. Enim ut tellus elementum sagittis vitae et leo. Vel eros donec ac odio tempor. Ultrices dui sapien eget mi proin sed. Enim ut sem viverra aliquet eget sit amet tellus cras.</p>
-
-        <h2>Excepteur sint occaecat</h2>
-        <p>Ultricies lacus sed turpis tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Leo in vitae turpis massa sed elementum. Nullam eget felis <a href="#">eget</a> nunc lobortis mattis. Enim ut tellus elementum sagittis vitae et leo. Vel eros donec ac odio tempor. Ultrices dui sapien eget mi proin sed. Enim ut sem viverra aliquet eget sit amet tellus cras.</p>
-
-        <h3>Excepteur sint occaecat</h3>
-        <p>Ultricies lacus sed turpis tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Leo in vitae turpis massa sed elementum. Nullam eget felis <a href="#">eget</a> nunc lobortis mattis. Enim ut tellus elementum sagittis vitae et leo. Vel eros donec ac odio tempor. Ultrices dui sapien eget mi proin sed. Enim ut sem viverra aliquet eget sit amet tellus cras.</p>
-
-        <h4>Excepteur sint occaecat</h4>
-        <p>Ultricies lacus sed turpis tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Leo in vitae turpis massa sed elementum. Nullam eget felis <a href="#">eget</a> nunc lobortis mattis. Enim ut tellus elementum sagittis vitae et leo. Vel eros donec ac odio tempor. Ultrices dui sapien eget mi proin sed. Enim ut sem viverra aliquet eget sit amet tellus cras.</p>
-
-        <h5>Excepteur sint occaecat</h5>
-        <p>Ultricies lacus sed turpis tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Leo in vitae turpis massa sed elementum. Nullam eget felis <a href="#">eget</a> nunc lobortis mattis. Enim ut tellus elementum sagittis vitae et leo. Vel eros donec ac odio tempor. Ultrices dui sapien eget mi proin sed. Enim ut sem viverra aliquet eget sit amet tellus cras.</p>
-
-        <h6>Excepteur sint occaecat</h6>
-        <p>Ultricies lacus sed turpis tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Leo in vitae turpis massa sed elementum. Nullam eget felis <a href="#">eget</a> nunc lobortis mattis. Enim ut tellus elementum sagittis vitae et leo. Vel eros donec ac odio tempor. Ultrices dui sapien eget mi proin sed. Enim ut sem viverra aliquet eget sit amet tellus cras.</p>
-
-        <ol>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-        </ol>
-
-        <ul>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-          <li>Nulla facilisi <a href="#">nullam</a> vehicula ipsum</li>
-        </ul>
-
-        <p>Ultricies lacus sed turpis tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Leo in vitae turpis massa sed elementum. Nullam eget felis <a href="#">eget</a> nunc lobortis mattis. Enim ut tellus elementum sagittis vitae et leo. Vel eros donec ac odio tempor. Ultrices dui sapien eget mi proin sed. Enim ut sem viverra aliquet eget sit amet tellus cras.</p>
-        <p>Ultricies lacus sed turpis tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Leo in vitae turpis massa sed elementum. Nullam eget felis <a href="#">eget</a> nunc lobortis mattis. Enim ut tellus elementum sagittis vitae et leo. Vel eros donec ac odio tempor. Ultrices dui sapien eget mi proin sed. Enim ut sem viverra aliquet eget sit amet tellus cras.</p>
-      </div>
     </Layout>
   )
 }
 
 export async function getStaticProps() {
-  // Hankyo Endpoint
+  // Endpoint
   const url = "https://hankyo-api-pro.herokuapp.com"
-  const token = "?hankyo_token=ZjiAAoU4XpdbuFqLqGTZPR1VmfucM7ya62TV2Dej3DUGMsAG"
 
   // Project
-  const projectReq = await fetch(`${url}/mies/project${token}`)
+  const projectToken = "ZjiAAoU4XpdbuFqLqGTZPR1VmfucM7ya62TV2Dej3DUGMsAG"
+  const projectReq = await fetch(`${url}/mies/project?project_token=${projectToken}`)
   const projectData = await projectReq.json()
 
   // Section
   const sectionUID = "4MDntMTiDVcR9P8vUtvr2eKz"
-  const sectionReq = await fetch(`${url}/mies/project/sections/${sectionUID}${token}`)
+  const sectionReq = await fetch(`${url}/mies/project/sections/${sectionUID}?project_token=${projectToken}`)
   const sectionData = await sectionReq.json()
 
   if (!projectData) {
