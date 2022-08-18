@@ -23,23 +23,11 @@ export default function Index({projectData, sectionData}) {
       <MetaComponent projectData={projectData} meta={meta} />
 
       {/* Hero */}
-      <div className="intro">
-        <div className="intro-box">
-          <div className="intro-row">
-            <figure>
-              <picture>
-                <Image
-                  src={hero.image}
-                  width={hero.width}
-                  height={hero.height}
-                  quality={75}
-                  priority="true"
-                  sizes="(max-width: 959px) 75vw, (min-width: 960px) 50vw, 100vw"
-                  alt={`Tony de Faria - Home - ${hero.uid}`}
-                  title="Tony de Faria"
-                />
-              </picture>
-            </figure>
+      <div className="hero">
+        <div className="hero-box">
+          <div className="hero-column">
+          </div>
+          <div className="hero-column">
           </div>
         </div>
       </div>

@@ -40,6 +40,7 @@
 
 // 5) Components
 // ------------------------------------------------------------
+@import "./components/hero";
 
 // 6) Overriders
 // ------------------------------------------------------------
@@ -55,3 +56,4 @@
 @import "./overriders/text_aligns";
 @import "./overriders/text_transformations";
 @import "./overriders/widths";
+@import "./overriders/misc"; // Always last
