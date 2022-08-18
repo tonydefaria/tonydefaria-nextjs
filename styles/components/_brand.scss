@@ -1,0 +1,35 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File: Brand
+// -------------------------------------------------------------
+
+$class: "brand";
+
+.#{$class} {
+  float: left;
+  .#{$class}-box {
+    float: left;
+    .#{$class}-item {
+      float: left;
+      padding: 8px 16px;
+      .#{$class}-link {
+        background-color: $black;
+        box-sizing: content-box;
+        float: left;
+        height: 24px;
+        min-width: 24px;
+        padding: 16px;
+      }
+    }
+  }
+}
+
+// Mobile
+// -------------------------------------------------------------
+@media #{$mobile} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}

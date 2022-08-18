@@ -1,3 +1,5 @@
+// Typography
+
 // Layout
 import Layout from "../layouts/primary"
 

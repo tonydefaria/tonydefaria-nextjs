@@ -1,12 +1,14 @@
-// Layout
-import Layout from "../layouts/primary"
+// Portraits
 
 // Built-in Components
-import React, { useEffect } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import Image from "next/future/image"
 
 // Components
 import MetaComponent from "../components/meta_component"
+
+// Layout
+import Layout from "../layouts/primary"
 
 export default function Portraits({projectData, sectionData}) {
   // Props
