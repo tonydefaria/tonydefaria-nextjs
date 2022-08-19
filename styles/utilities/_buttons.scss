@@ -3,7 +3,7 @@
 // -------------------------------------------------------------
 
 @mixin button-default {
-  @include button-gray-blue;
+  @include button-grey-blue;
   appearance: none;
   border: 0;
   border-radius: 3px;
@@ -95,48 +95,48 @@
 
 // Button Colours
 
-@mixin button-gray {
+@mixin button-grey {
   &:link,
   &:visited {
-    background-color: $gray-900;
-    color: $gray-000;
-    .icon { svg * { fill: $gray-000; } }
+    background-color: $grey-900;
+    color: $grey-000;
+    .icon { svg * { fill: $grey-000; } }
   }
   &:hover,
   &:active {
-    background-color: $gray-900;
-    color: $gray-000;
-    .icon { svg * { fill: $gray-000; } }
+    background-color: $grey-900;
+    color: $grey-000;
+    .icon { svg * { fill: $grey-000; } }
   }
 }
 
-@mixin button-gray-blue {
+@mixin button-grey-blue {
   &:link,
   &:visited {
-    background-color: $gray-900;
-    color: $gray-000;
-    .icon { svg * { fill: $gray-000; } }
+    background-color: $grey-900;
+    color: $grey-000;
+    .icon { svg * { fill: $grey-000; } }
   }
   &:hover,
   &:active {
     background-color: $blue-500;
-    color: $gray-000;
-    .icon { svg * { fill: $gray-000; } }
+    color: $grey-000;
+    .icon { svg * { fill: $grey-000; } }
   }
 }
 
-@mixin button-blue-gray {
+@mixin button-blue-grey {
   &:link,
   &:visited {
     background-color: $blue-500;
-    color: $gray-000;
-    .icon { svg * { fill: $gray-000; } }
+    color: $grey-000;
+    .icon { svg * { fill: $grey-000; } }
   }
   &:hover,
   &:active {
-    background-color: $gray-900;
-    color: $gray-000;
-    .icon { svg * { fill: $gray-000; } }
+    background-color: $grey-900;
+    color: $grey-000;
+    .icon { svg * { fill: $grey-000; } }
   }
 }
 
@@ -147,6 +147,6 @@
 .button-m { @include button-m; }
 .button-l { @include button-l; }
 
-.button-gray      { @include button-gray; }
-.button-gray-blue { @include button-gray-blue; }
-.button-blue-gray { @include button-blue-gray; }
+.button-grey      { @include button-grey; }
+.button-grey-blue { @include button-grey-blue; }
+.button-blue-grey { @include button-blue-grey; }

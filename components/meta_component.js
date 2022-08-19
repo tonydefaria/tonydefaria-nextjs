@@ -3,17 +3,17 @@
 // Built-in Components
 import Head from "next/head"
 
-export default function MetaComponent({projectData, meta}) {
+export default function MetaComponent({project, meta}) {
   {/* Global attributes */}
   const title = meta.title
   const description = meta.description
   const keywords = meta.keywords
   const url = meta.url
-  const type_of = projectData.project.type_of
+  const type_of = project.type_of
   const image = meta.image
-  const author = projectData.project.global_attributes.find(({uid}) => uid === "vVJh6fY3hXPpTi1mnhu2g6wG").value
-  const twitter_card = projectData.project.global_attributes.find(({uid}) => uid === "r5BSc98jYfUZbNLxZPVSesHP").value
-  const twitter_handle = projectData.project.global_attributes.find(({uid}) => uid === "dZabogRgkov9zRRh7oj47r8q").value
+  const author = project.global_attributes.find(({uid}) => uid === "vVJh6fY3hXPpTi1mnhu2g6wG").value
+  const twitter_card = project.global_attributes.find(({uid}) => uid === "r5BSc98jYfUZbNLxZPVSesHP").value
+  const twitter_handle = project.global_attributes.find(({uid}) => uid === "dZabogRgkov9zRRh7oj47r8q").value
 
   return (
     <Head>

@@ -11,14 +11,15 @@ $class: "brand";
     .#{$class}-item {
       float: left;
       padding: 8px 16px;
-      .#{$class}-link {
-        background-color: $black;
+      .#{$class}-icon,
+      .#{$class}-logo {
         box-sizing: content-box;
         float: left;
         height: 24px;
-        min-width: 24px;
         padding: 16px;
       }
+      .#{$class}-icon { width: 23.09px; }
+      .#{$class}-logo { width: 152.02px; }
     }
   }
 }

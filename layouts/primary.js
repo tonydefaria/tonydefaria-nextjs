@@ -8,13 +8,16 @@ import HeaderComponent from "../components/header_component"
 import FooterComponent from "../components/footer_component"
 
 export default function Primary({ children }) {
+  // Get props
+  const project = children.props.projectData.project
+
   return (
-    <div className="primary" id="primary">
+    <div className="primary lock-menu scroll" id="primary">
       {/* Header */}
-      <HeaderComponent />
+      <HeaderComponent project={project} />
 
       {/* Main */}
-      <main className="universal main" id="main">
+      <main className="universal main lock-menu scroll" id="main">
         <div className="universal-box">
           <div className="universal-row">
             {children}
@@ -23,7 +26,7 @@ export default function Primary({ children }) {
       </main>
 
       {/* Footer */}
-      <FooterComponent />
+      <FooterComponent project={project} />
     </div>
   )
 }

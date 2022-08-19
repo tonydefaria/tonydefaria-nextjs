@@ -12,6 +12,7 @@ import Layout from "../layouts/primary"
 
 export default function Index({projectData, sectionData}) {
   // Props
+  const project = projectData.project
   const meta = sectionData.section.meta_tag
   const hero = sectionData.section.blocks.find(({uid}) => uid === "wqq2dxdWkWsqRwjWAbiCEpbx")
 
@@ -20,9 +21,9 @@ export default function Index({projectData, sectionData}) {
   }, [])
 
   return (
-    <Layout>
+    <div className="page">
       {/* Meta */}
-      <MetaComponent projectData={projectData} meta={meta} />
+      <MetaComponent project={project} meta={meta} />
 
       {/* Hero */}
       <div className="hero">
@@ -30,10 +31,11 @@ export default function Index({projectData, sectionData}) {
           <div className="hero-column">
           </div>
           <div className="hero-column">
+            <h1>{hero.title}</h1>
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 
@@ -67,3 +69,5 @@ export async function getStaticProps() {
     }
   }
 }
+
+Index.Layout = Layout

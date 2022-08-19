@@ -93,15 +93,15 @@
 }
 
 @mixin separator-dashed {
-  border-top: 1px dashed $gray-300;
+  border-top: 1px dashed $grey-300;
 }
 
 @mixin separator-dotted {
-  border-top: 1px dotted $gray-300;
+  border-top: 1px dotted $grey-300;
 }
 
 @mixin separator-solid {
-  border-top: 1px solid $gray-300;
+  border-top: 1px solid $grey-300;
 }
 
 // Classes

@@ -5,7 +5,7 @@ import Layout from "../layouts/primary"
 
 export default function Typography() {
   return (
-    <Layout>
+    <div className="page">
       <h1>Excepteur sint occaecat</h1>
       <hr className="separator-xl" />
       <p>Ultricies lacus sed turpis tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Leo in vitae turpis massa sed elementum. Nullam eget felis <a href="#">eget</a> nunc lobortis mattis. Enim ut tellus elementum sagittis vitae et leo. Vel eros donec ac odio tempor. Ultrices dui sapien eget mi proin sed. Enim ut sem viverra aliquet eget sit amet tellus cras.</p>
@@ -56,6 +56,8 @@ export default function Typography() {
         <p>Ultricies lacus sed turpis tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Leo in vitae turpis massa sed elementum. Nullam eget felis <a href="#">eget</a> nunc lobortis mattis. Enim ut tellus elementum sagittis vitae et leo. Vel eros donec ac odio tempor. Ultrices dui sapien eget mi proin sed. Enim ut sem viverra aliquet eget sit amet tellus cras.</p>
         <p>Ultricies lacus sed turpis tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Leo in vitae turpis massa sed elementum. Nullam eget felis <a href="#">eget</a> nunc lobortis mattis. Enim ut tellus elementum sagittis vitae et leo. Vel eros donec ac odio tempor. Ultrices dui sapien eget mi proin sed. Enim ut sem viverra aliquet eget sit amet tellus cras.</p>
       </div>
-    </Layout>
+    </div>
   )
 }
+
+Typography.Layout = Layout

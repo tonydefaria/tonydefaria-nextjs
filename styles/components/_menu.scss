@@ -1,0 +1,71 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File: Menu
+// -------------------------------------------------------------
+
+$class: "menu";
+
+.#{$class} {
+  background-color: $grey-000;
+  bottom: 0;
+  display: none;
+  float: left;
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  touch-action: none;
+  width: 100%;
+  visibility: hidden;
+  z-index: -1;
+  .#{$class}-wrapper {
+    float: left;
+    width: 100%;
+  }
+  .#{$class}-box {
+    float: left;
+    padding: 32px;
+    width: 100%;
+    .#{$class}-item {
+      float: left;
+      padding: 0 0 16px;
+      margin: 0;
+      width: 100%;
+      &:last-child {
+        padding: 0;
+      }
+      .link {
+        font-size: 96px;
+        line-height: 1;
+      }
+    }
+  }
+  &.open {
+    display: block;
+    height: 100vh;
+    visibility: visible;
+  }
+  &.closed {
+    display: none;
+    height: 0vh;
+    visibility: hidden;
+  }
+}
+
+// Mobile
+// -------------------------------------------------------------
+@media #{$mobile} {
+  .#{$class} {
+    .#{$class}-box {
+      width: 100%;
+      .#{$class}-item {
+        padding: 0 0 8px;
+        .link {
+          font-size: 48px;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}

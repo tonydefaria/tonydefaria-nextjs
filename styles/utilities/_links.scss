@@ -3,7 +3,7 @@
 // -------------------------------------------------------------
 
 @mixin link-default {
-  @include link-gray-blue;
+  @include link-grey-blue;
   appearance: none;
   background-color: transparent;
   border: 0;
@@ -27,7 +27,9 @@
     width: auto;
     object,
     img,
-    svg {
+    svg,
+    svg * {
+      @include hover-animation(.5s);
       border: none;
       float: left;
       margin: 0;
@@ -108,28 +110,28 @@
 
 // Link Colours
 
-@mixin link-gray {
-  color: $gray-900;
-  fill: $gray-900;
+@mixin link-grey {
+  color: $grey-900;
+  fill: $grey-900;
   &:link,
   &:visited {
-    color: $gray-900;
-    .icon { svg * { fill: $gray-900; } }
+    color: $grey-900;
+    .icon { svg * { fill: $grey-900; } }
   }
   &:hover,
   &:active {
-    color: $gray-900;
-    .icon { svg * { fill: $gray-900; } }
+    color: $grey-900;
+    .icon { svg * { fill: $grey-900; } }
   }
 }
 
-@mixin link-gray-blue {
-  color: $gray-900;
-  fill: $gray-900;
+@mixin link-grey-blue {
+  color: $grey-900;
+  fill: $grey-900;
   &:link,
   &:visited {
-    color: $gray-900;
-    .icon { svg * { fill: $gray-900; } }
+    color: $grey-900;
+    .icon { svg * { fill: $grey-900; } }
   }
   @media (hover: hover) {
     &:hover,
@@ -140,7 +142,7 @@
   }
 }
 
-@mixin link-blue-gray {
+@mixin link-blue-grey {
   color: $blue-500;
   fill: $blue-500;
   &:link,
@@ -151,8 +153,8 @@
   @media (hover: hover) {
     &:hover,
     &:active {
-      color: $gray-900;
-      .icon { svg * { fill: $gray-900; } }
+      color: $grey-900;
+      .icon { svg * { fill: $grey-900; } }
     }
   }
 }
@@ -164,6 +166,6 @@
 .link-m   { @include link-m; }
 .link-l   { @include link-l; }
 
-.link-gray      { @include link-gray; }
-.link-gray-blue { @include link-gray-blue; }
-.link-blue-gray { @include link-blue-gray; }
+.link-grey      { @include link-grey; }
+.link-grey-blue { @include link-grey-blue; }
+.link-blue-grey { @include link-blue-grey; }

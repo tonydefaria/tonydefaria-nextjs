@@ -10,3 +10,16 @@
   scrollbar-width: none !important;
   touch-action: none !important;
 }
+
+.headroom {
+  will-change: transform !important;
+  transition: transform 100ms linear !important;
+}
+
+.headroom--pinned {
+  transform: translateY(0%) !important;
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%) !important;
+}

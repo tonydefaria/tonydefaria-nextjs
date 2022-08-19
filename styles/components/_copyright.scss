@@ -1,23 +1,18 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File: Hamburger
+// File: Copyright
 // -------------------------------------------------------------
 
-$class: "hamburger";
+$class: "copyright";
 
 .#{$class} {
-  float: right;
+  float: left;
   .#{$class}-box {
     float: left;
+    padding: 16px;
     .#{$class}-item {
       float: left;
-      padding: 8px 16px;
-      .#{$class}-link {
-        box-sizing: content-box;
-        float: left;
-        height: 24px;
-        min-width: 24px;
-        padding: 16px;
-      }
+      padding: 16px;
+      p { line-height: 32px; }
     }
   }
 }
@@ -26,8 +21,12 @@ $class: "hamburger";
 // -------------------------------------------------------------
 @media #{$mobile} {
   .#{$class} {
+    width: 100%;
     .#{$class}-box {
+      padding: 0 16px 16px;
       .#{$class}-item {
+        padding: 8px 16px 16px;
+        p { line-height: 24px; }
       }
     }
   }

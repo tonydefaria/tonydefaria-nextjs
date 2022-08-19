@@ -7,8 +7,8 @@ import React, { useContext, useState, useEffect } from "react"
 import "../styles/composer.scss"
 
 export default function MyApp({ Component, pageProps}) {
-  // Use the layout defined at the page level, if available
-  const getLayout = Component.getLayout || ((page) => page)
+  // Layout
+  const Layout = Component.Layout ? Component.Layout : React.Fragment
 
   // Effect
   useEffect(() => {
@@ -21,6 +21,8 @@ export default function MyApp({ Component, pageProps}) {
   }, [])
 
   return (
-    getLayout(<Component {...pageProps} />)
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   )
 }
