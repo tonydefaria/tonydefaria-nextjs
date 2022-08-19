@@ -1,4 +1,4 @@
-// Index
+// About
 
 // Built-in Components
 import React, { useContext, useState, useEffect } from "react"
@@ -11,45 +11,45 @@ import MetaComponent from "../components/meta_component"
 // Layout
 import Layout from "../layouts/primary"
 
-export default function Index({projectData, sectionData}) {
+export default function About({projectData, sectionData}) {
   // Props
   const project = projectData.project
   const meta = sectionData.section.meta_tag
-  const hero = sectionData.section.blocks.find(({uid}) => uid === "wqq2dxdWkWsqRwjWAbiCEpbx")
+  const hero = sectionData.section.blocks.find(({uid}) => uid === "3DucbePbPn3BEjxpK3Ad1dd3")
+  const textBlocks = sectionData.section.blocks.filter(textBlock => textBlock.type_of === "text")
+
+  // Effect
+  useEffect(() => {
+  }, [])
 
   return (
-    <div className="page" id="top">
+    <div className="page">
       {/* Meta */}
       <MetaComponent project={project} meta={meta} />
 
       {/* Hero */}
       <div className="hero">
         <div className="hero-box">
-          <div className="hero-row">
-            <h1 className="header-size-xxl text-align-center">{hero.title}</h1>
+          <div className="hero-column writer">
+            <h1>{hero.title}</h1>
+            <p className="font-weight-400">{hero.description}</p>
           </div>
-          <div className="hero-row">
-            <figure>
-              <picture>
-                <Image
-                  src={hero.image}
-                  width={hero.width}
-                  height={hero.height}
-                  quality={75}
-                  priority="true"
-                  sizes="(max-width: 959px) 75vw, (min-width: 960px) 50vw, 100vw"
-                  alt={`Tony de Faria - Home - ${hero.uid}`}
-                  title="Tony de Faria"
-                />
-              </picture>
-            </figure>
-          </div>
-          <div className="hero-row">
-            <p className="text-align-center">{hero.subtitle}</p>
-          </div>
-          <div className="hero-row flex-h-center">
-            <Link href="/about"><a className="button-s button-grey-blue">{hero.cta_label}</a></Link>
-          </div>
+        </div>
+      </div>
+
+      {/* Hero */}
+      <div className="content writer">
+        <div className="content-box">
+          {/* Text Blocks */}
+          {textBlocks.map((textBlock, index) => {
+            return (
+              <div key={textBlock.uid} className={`content-row`}>
+                <div className={`content-inner float-right`}>
+                  <div dangerouslySetInnerHTML={{ __html: textBlock.text }} />
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>
@@ -66,7 +66,7 @@ export async function getStaticProps() {
   const projectData = await projectReq.json()
 
   // Section
-  const sectionUID = "4MDntMTiDVcR9P8vUtvr2eKz"
+  const sectionUID = "3wbtGjsGzz9NqxySJBumk6fT"
   const sectionReq = await fetch(`${url}/mies/project/sections/${sectionUID}?project_token=${projectToken}`)
   const sectionData = await sectionReq.json()
 
@@ -87,4 +87,4 @@ export async function getStaticProps() {
   }
 }
 
-Index.Layout = Layout
+About.Layout = Layout

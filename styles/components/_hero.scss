@@ -23,6 +23,10 @@ $class: "hero";
       padding: 16px;
       width: 50%;
     }
+    .#{$class}-inner {
+      float: left;
+      width: 100%;
+    }
   }
 }
 
@@ -37,6 +41,8 @@ $class: "hero";
       }
       .#{$class}-column {
         width: 100%;
+      }
+      .#{$class}-inner {
       }
     }
   }

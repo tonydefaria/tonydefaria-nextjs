@@ -21,7 +21,7 @@ class MyDocument extends Document {
             strategy="beforeInteractive"
           />
         </Head>
-        <body className="lock-menu scroll" id="body">
+        <body className="lock-menu scroll body" id="body">
           <Main />
           <NextScript />
         </body>

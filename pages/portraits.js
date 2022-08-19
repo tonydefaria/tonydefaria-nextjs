@@ -30,7 +30,7 @@ export default function Portraits({projectData, sectionData}) {
       {/* Hero */}
       <div className="hero">
         <div className="hero-box">
-          <div className="hero-row">
+          <div className="hero-column">
             <h1>{hero.title}</h1>
           </div>
         </div>

@@ -72,6 +72,16 @@
   }
 }
 
+@mixin header-size-xxxl {
+  font-size: 4vw;
+  line-height: 1;
+
+  @media #{$mobile} {
+    font-size: 64px;
+    line-height: 72px;
+  }
+}
+
 // Classes
 // -------------------------------------------------------------
 .header-size-xxs {
@@ -107,4 +117,9 @@
 .header-size-xxl {
   @include header-size-xxl;
   p, div { @include header-size-xxl; }
+}
+
+.header-size-xxxl {
+  @include header-size-xxxl;
+  p, div { @include header-size-xxxl; }
 }

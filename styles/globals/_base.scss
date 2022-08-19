@@ -80,6 +80,7 @@ a {
 figure {
   display: block;
   float: left;
+  height: auto;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -89,6 +90,7 @@ figure {
 picture {
   display: block;
   float: left;
+  height: auto;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -99,8 +101,10 @@ img {
   border-radius: 3px;
   display: block;
   float: left;
+  // height: 100%;
   height: auto;
   margin: 0;
+  max-width: 100%;
   padding: 0;
   width: 100%;
 }

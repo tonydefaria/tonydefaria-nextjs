@@ -2,6 +2,10 @@
 // File: Misc
 // -------------------------------------------------------------
 
+// html {
+//   scroll-behavior: smooth !important;
+// }
+
 .noscroll {
   height: 0 !important;
   width: 0 !important;
@@ -13,7 +17,7 @@
 
 .headroom {
   will-change: transform !important;
-  transition: transform 100ms linear !important;
+  transition: transform 300ms linear !important;
 }
 
 .headroom--pinned {

@@ -17,7 +17,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.54.4",
-    "sharp": "^0.30.7"
+    "sharp": "^0.30.7",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
     "eslint": "8.22.0",
