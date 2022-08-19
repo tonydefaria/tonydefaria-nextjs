@@ -82,23 +82,25 @@ figure {
   float: left;
   height: auto;
   margin: 0;
-  padding: 0;
+  padding: 16px;
   width: 100%;
   figcaption {
     @include font-size-xxs;
     background-color: $grey-900;
-    border-radius: 2px;
+    border-radius: 3px;
     color: $grey-000;
     display: block;
     float: left;
     height: auto;
     margin: 4px 0 0;
-    padding: 0 8px;
+    padding: 8px;
     width: auto;
   }
 }
 
 picture {
+  background-color: $white;
+  border-radius: 3px;
   display: block;
   float: left;
   height: auto;

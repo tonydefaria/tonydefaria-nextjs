@@ -46,9 +46,10 @@ export default function Index({projectData, sectionData}) {
           </div>
           <div className="hero-row">
             <p className="font-weight-700 grey-900-cl text-align-center">{hero.subtitle}</p>
-          </div>
-          <div className="hero-row flex-h-center">
-            <Link href="/about"><a className="button-s button-grey-blue">{hero.cta_label}</a></Link>
+            <hr className="separator-xxs" />
+            <div className="width-wide flex-h-center">
+              <Link href="/about"><a className="link-s link-blue-grey">{hero.cta_label}</a></Link>
+            </div>
           </div>
         </div>
       </div>
