@@ -68,4 +68,4 @@ export async function getStaticProps() {
   }
 }
 
-Portraits.Layout = Layout
+Contact.Layout = Layout

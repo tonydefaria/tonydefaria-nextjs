@@ -6,7 +6,22 @@ $class: "hero";
 
 .#{$class} {
   .#{$class}-box {
+    float: left;
+    padding: 16px;
+    width: 100%;
+    .#{$class}-row {
+      float: left;
+      padding: 16px;
+      width: 100%;
+    }
+    .#{$class}-item {
+      float: left;
+      padding: 16px;
+    }
     .#{$class}-column {
+      float: left;
+      padding: 16px;
+      width: 50%;
     }
   }
 }
@@ -16,7 +31,12 @@ $class: "hero";
 @media #{$mobile} {
   .#{$class} {
     .#{$class}-box {
+      .#{$class}-row {
+      }
+      .#{$class}-item {
+      }
       .#{$class}-column {
+        width: 100%;
       }
     }
   }

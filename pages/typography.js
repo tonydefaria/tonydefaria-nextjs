@@ -3,7 +3,7 @@
 // Layout
 import Layout from "../layouts/primary"
 
-export default function Typography() {
+export default function Typography({projectData}) {
   return (
     <div className="page">
       <h1>Excepteur sint occaecat</h1>
@@ -58,6 +58,31 @@ export default function Typography() {
       </div>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  // Endpoint
+  const url = "https://hankyo-api-pro.herokuapp.com"
+
+  // Project
+  const projectToken = "ZjiAAoU4XpdbuFqLqGTZPR1VmfucM7ya62TV2Dej3DUGMsAG"
+  const projectReq = await fetch(`${url}/mies/project?project_token=${projectToken}`)
+  const projectData = await projectReq.json()
+
+  if (!projectData) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    }
+  }
+
+  return {
+    props: {
+      projectData
+    }
+  }
 }
 
 Typography.Layout = Layout

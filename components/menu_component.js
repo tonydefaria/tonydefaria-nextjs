@@ -28,16 +28,16 @@ export default function MenuComponent() {
       <div className="menu-wrapper">
         <ul className="menu-box">
           <li className="menu-item">
-            <Link href="/">
+            <Link href="/portraits">
               <a className="link link-grey-blue" onClick={() => { toggleMenu(); trackMenuPortraitsCabin();}}>
-                Link Two
+                Portraits
               </a>
             </Link>
           </li>
           <li className="menu-item">
-            <Link href="/">
+            <Link href="/contact">
               <a className="link link-grey-blue" onClick={() => { toggleMenu(); trackMenuContactCabin();}}>
-                Link Two
+                Contact
               </a>
             </Link>
           </li>

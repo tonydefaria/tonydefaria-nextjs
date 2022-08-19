@@ -10,17 +10,17 @@ export default function SitemapComponent() {
       <div className="sitemap-box">
         <div className="sitemap-item">
           <Link href="/">
-            <a className="link-s link-grey-blue">Link</a>
+            <a className="link-s link-grey-blue">Home</a>
           </Link>
         </div>
         <div className="sitemap-item">
-          <Link href="/">
-            <a className="link-s link-grey-blue">Link</a>
+          <Link href="/portraits">
+            <a className="link-s link-grey-blue">Portraits</a>
           </Link>
         </div>
         <div className="sitemap-item">
-          <Link href="/">
-            <a className="link-s link-grey-blue">Link</a>
+          <Link href="/contact">
+            <a className="link-s link-grey-blue">Contact</a>
           </Link>
         </div>
       </div>
