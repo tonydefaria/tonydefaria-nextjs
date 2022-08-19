@@ -60,7 +60,7 @@ export default function About({projectData, sectionData}) {
                       alt={`Tony de Faria - Portrait - ${block.uid}`}
                       title="Tony de Faria"
                       priority="true"
-                      sizes="(max-width: 1439px) 100vw, (min-width: 1440px) 50vw"
+                      sizes="(max-width: 959px) 75vw, (min-width: 960px) 50vw, 100vw"
                     />
                   </picture>
                   <figcaption>{block.caption}</figcaption>
