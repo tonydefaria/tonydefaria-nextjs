@@ -16,7 +16,9 @@ export default function About({projectData, sectionData}) {
   const project = projectData.project
   const meta = sectionData.section.meta_tag
   const hero = sectionData.section.blocks.find(({uid}) => uid === "3DucbePbPn3BEjxpK3Ad1dd3")
-  const textBlocks = sectionData.section.blocks.filter(textBlock => textBlock.type_of === "text")
+
+  const blocks = sectionData.section.blocks
+  const filterBlocks = blocks.filter(({type_of}) => type_of !== ("hero" || "gallery"))
 
   // Effect
   useEffect(() => {
@@ -32,20 +34,42 @@ export default function About({projectData, sectionData}) {
         <div className="hero-box">
           <div className="hero-column writer">
             <h1>{hero.title}</h1>
-            <p className="font-weight-400">{hero.description}</p>
+            <p className="font-weight-700 grey-900-cl">{hero.description}</p>
           </div>
         </div>
       </div>
 
-      {/* Hero */}
+      {/* Content */}
       <div className="content writer">
         <div className="content-box">
-          {/* Text Blocks */}
-          {textBlocks.map((textBlock, index) => {
+          {/* Blocks */}
+          {filterBlocks.map((block, index) => {
+            let setBlock
+            if (block.type_of === "text") {
+              setBlock =
+                <div dangerouslySetInnerHTML={{ __html: block.text }} />
+            } else if (block.type_of === "image") {
+              setBlock =
+                <figure>
+                  <picture>
+                    <Image
+                      src={block.image}
+                      width={block.width}
+                      height={block.height}
+                      quality={100}
+                      alt={`Tony de Faria - Portrait - ${block.uid}`}
+                      title="Tony de Faria"
+                      priority="true"
+                      sizes="(max-width: 1439px) 100vw, (min-width: 1440px) 50vw"
+                    />
+                  </picture>
+                  <figcaption>{block.caption}</figcaption>
+                </figure>
+            }
             return (
-              <div key={textBlock.uid} className={`content-row`}>
+              <div key={block.uid} className={`content-row`}>
                 <div className={`content-inner float-right`}>
-                  <div dangerouslySetInnerHTML={{ __html: textBlock.text }} />
+                  {setBlock}
                 </div>
               </div>
             )

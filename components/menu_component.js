@@ -27,21 +27,21 @@ export default function MenuComponent() {
     <div className={`menu flex-v-center ${isOpen ? "open" : "closed"}`} id="menu">
       <div className="menu-wrapper">
         <ul className="menu-box">
-          <li className="menu-item">
+          <li className="menu-item flex-h-center">
             <Link href="/about">
               <a className="link link-grey-blue" onClick={() => { toggleMenu(); trackMenuPortraitsCabin();}}>
                 About
               </a>
             </Link>
           </li>
-          <li className="menu-item">
+          <li className="menu-item flex-h-center">
             <Link href="/portraits">
               <a className="link link-grey-blue" onClick={() => { toggleMenu(); trackMenuPortraitsCabin();}}>
                 Portraits
               </a>
             </Link>
           </li>
-          <li className="menu-item">
+          <li className="menu-item flex-h-center">
             <Link href="/contact">
               <a className="link link-grey-blue" onClick={() => { toggleMenu(); trackMenuContactCabin();}}>
                 Contact

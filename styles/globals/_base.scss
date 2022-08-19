@@ -84,7 +84,18 @@ figure {
   margin: 0;
   padding: 0;
   width: 100%;
-  figcaption {}
+  figcaption {
+    @include font-size-xxs;
+    background-color: $grey-900;
+    border-radius: 2px;
+    color: $grey-000;
+    display: block;
+    float: left;
+    height: auto;
+    margin: 4px 0 0;
+    padding: 0 8px;
+    width: auto;
+  }
 }
 
 picture {
@@ -123,6 +134,5 @@ span {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   margin: 0;
-  padding: 0;
   vertical-align: bottom;
 }

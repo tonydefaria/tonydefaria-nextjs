@@ -15,7 +15,7 @@ export default function CopyrightComponent() {
     <div className="copyright flex-h-center">
       <div className="copyright-box">
         <div className="copyright-item">
-          <p className="font-size-xxs">&copy; 1980-<span className="year"></span> Tony de Faria.</p>
+          <p className="font-size-xxs grey-900-cl">&copy; 1980-<span className="year"></span> Tony de Faria.</p>
         </div>
       </div>
     </div>

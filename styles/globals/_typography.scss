@@ -11,7 +11,7 @@ h6 {
   display: block;
   float: left;
   font-family: $serif;
-  font-weight: 900;
+  font-weight: 700;
   hyphens: none;
   margin: 0;
   padding: 0;
@@ -27,6 +27,7 @@ h6 { @include header-size-xs; }
 
 p {
   @include font-size-m;
+  color: $grey-700;
   display: block;
   float: left;
   font-weight: 400;
