@@ -27,7 +27,6 @@ h6 { @include header-size-xs; }
 
 p {
   @include font-size-m;
-  color: $grey-700;
   display: block;
   float: left;
   font-weight: 400;
@@ -45,7 +44,6 @@ ul {
   padding: 0;
   width: 100%;
   li {
-    @include header-size-s;
     float: left;
     margin: 0;
     padding: 0;
@@ -63,7 +61,6 @@ li {
     line-height: inherit;
     margin: 0;
     padding: 0;
-    vertical-align: bottom;
   }
 }
 

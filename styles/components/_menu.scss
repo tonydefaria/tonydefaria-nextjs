@@ -37,7 +37,19 @@ $class: "menu";
       }
       .link {
         font-size: 96px;
-        line-height: 1;
+        line-height: 112px;
+        &.underline {
+          text-decoration-line: underline;
+          text-decoration-thickness: 16px;
+        }
+        &.hover-underline {
+          &:hover,
+          &:active {
+            // text-decoration: underline;
+            text-decoration-line: underline;
+            text-decoration-thickness: 16px;
+          }
+        }
       }
     }
   }
@@ -63,7 +75,19 @@ $class: "menu";
         padding: 0 0 8px;
         .link {
           font-size: 48px;
-          line-height: 1;
+          line-height: 56px;
+          &.underline {
+            text-decoration-line: underline;
+            text-decoration-thickness: 8px;
+          }
+          &.hover-underline {
+            &:hover,
+            &:active {
+              // text-decoration: underline;
+              text-decoration-line: underline;
+              text-decoration-thickness: 8px;
+            }
+          }
         }
       }
     }

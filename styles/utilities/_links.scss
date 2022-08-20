@@ -11,12 +11,16 @@
   float: left;
   font-weight: 900;
   letter-spacing: .030em;
-  text-decoration: underline;
   width: auto;
+  &.underline {
+    text-decoration-line: underline;
+    text-decoration-thickness: 8px;
+  }
   &.hover-underline {
     &:hover,
     &:active {
-      text-decoration: underline;
+      text-decoration-line: underline;
+      text-decoration-thickness: 8px;
     }
   }
   span,
@@ -36,6 +40,18 @@
       padding: 0;
     }
   }
+
+  @media #{$mobile} {
+    &.underline {
+      text-decoration-thickness: 6px;
+    }
+    &.hover-underline {
+      &:hover,
+      &:active {
+        text-decoration-thickness: 6px;
+      }
+    }
+  }
 }
 
 @mixin link {
@@ -45,6 +61,17 @@
 @mixin link-s {
   @include link-default;
   @include font-size-s;
+  &.underline {
+    text-decoration-line: underline;
+    text-decoration-thickness: 6px;
+  }
+  &.hover-underline {
+    &:hover,
+    &:active {
+      text-decoration-line: underline;
+      text-decoration-thickness: 6px;
+    }
+  }
   .icon {
     height: 24px;
     margin: 4px 0;
@@ -57,16 +84,35 @@
     }
   }
 
-  // Mobile
-  // -------------------------------------------------------------
   @media #{$mobile} {
     .icon { margin: 0; }
+
+    &.underline {
+      text-decoration-thickness: 4px;
+    }
+    &.hover-underline {
+      &:hover,
+      &:active {
+        text-decoration-thickness: 4px;
+      }
+    }
   }
 }
 
 @mixin link-m {
   @include link-default;
   @include font-size-m;
+  &.underline {
+    text-decoration-line: underline;
+    text-decoration-thickness: 8px;
+  }
+  &.hover-underline {
+    &:hover,
+    &:active {
+      text-decoration-line: underline;
+      text-decoration-thickness: 8px;
+    }
+  }
   .icon {
     height: 32px;
     margin: 4px 0;
@@ -79,16 +125,35 @@
     }
   }
 
-  // Mobile
-  // -------------------------------------------------------------
   @media #{$mobile} {
     .icon { margin: 0; }
+
+    &.underline {
+      text-decoration-thickness: 6px;
+    }
+    &.hover-underline {
+      &:hover,
+      &:active {
+        text-decoration-thickness: 6px;
+      }
+    }
   }
 }
 
 @mixin link-l {
   @include link-default;
   @include font-size-l;
+  &.underline {
+    text-decoration-line: underline;
+    text-decoration-thickness: 10px;
+  }
+  &.hover-underline {
+    &:hover,
+    &:active {
+      text-decoration-line: underline;
+      text-decoration-thickness: 10px;
+    }
+  }
   .icon {
     height: 40px;
     margin: 4px 0;
@@ -101,10 +166,17 @@
     }
   }
 
-  // Mobile
-  // -------------------------------------------------------------
   @media #{$mobile} {
     .icon { margin: 0; }
+    &.underline {
+      text-decoration-thickness: 8px;
+    }
+    &.hover-underline {
+      &:hover,
+      &:active {
+        text-decoration-thickness: 8px;
+      }
+    }
   }
 }
 

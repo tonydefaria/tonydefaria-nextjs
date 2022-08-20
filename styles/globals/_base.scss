@@ -82,18 +82,18 @@ figure {
   float: left;
   height: auto;
   margin: 0;
-  padding: 16px;
   width: 100%;
   figcaption {
-    @include font-size-xxs;
     background-color: $grey-900;
     border-radius: 3px;
     color: $grey-000;
     display: block;
+    font-size: 11px;
     float: left;
     height: auto;
+    line-height: 15px;
     margin: 4px 0 0;
-    padding: 8px;
+    padding: 2px 5px 1px;
     width: auto;
   }
 }
