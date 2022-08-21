@@ -2,14 +2,13 @@
 
 // Built-in Components
 import React, { useContext, useState, useEffect } from "react"
-import Link from "next/link"
-import Image from "next/future/image"
-
-import sanitizeHtml from 'sanitize-html';
-import parse from 'html-react-parser';
 
 // Components
 import MetaComponent from "../components/meta_component"
+
+// Block Components
+import TextBlockComponent from "../components/blocks/text_block_component"
+import ImageBlockComponent from "../components/blocks/image_block_component"
 
 // Layout
 import Layout from "../layouts/primary"
@@ -45,38 +44,22 @@ export default function About({projectData, sectionData}) {
       {/* Content */}
       <div className="content writer">
         <div className="content-box">
-          <div className={`content-row`}>
-            {/* Blocks */}
-            {filterBlocks.map((block, index) => {
-              let setBlock
-              if (block.type_of === "text") {
-                setBlock =
-                  parse(sanitizeHtml(block.text));
-              } else if (block.type_of === "image") {
-                setBlock =
-                  <figure>
-                    <picture>
-                      <Image
-                        src={block.image}
-                        width={block.width}
-                        height={block.height}
-                        quality={100}
-                        alt={`Tony de Faria - Portrait - ${block.uid}`}
-                        title="Tony de Faria"
-                        priority="true"
-                        sizes="(max-width: 959px) 75vw, (min-width: 960px) 50vw, 100vw"
-                      />
-                    </picture>
-                    <figcaption>{block.caption}</figcaption>
-                  </figure>
-              }
-              return (
-                <div key={block.uid} className={`content-inner float-right`}>
+          {/* Blocks */}
+          {filterBlocks.map((block, index) => {
+            let setBlock
+            if (block.type_of === "text") {
+              setBlock = <TextBlockComponent block={block} />
+            } else if (block.type_of === "image") {
+              setBlock = <ImageBlockComponent block={block} />
+            }
+            return (
+              <div className="content-row writer-box">
+                <div className="content-inner float-right">
                   {setBlock}
                 </div>
-              )
-            })}
-          </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>
