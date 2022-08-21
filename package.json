@@ -11,12 +11,14 @@
   },
   "dependencies": {
     "headroom.js": "^0.12.0",
+    "html-react-parser": "^3.0.3",
     "next": "12.2.5",
-    "next-sitemap": "^3.1.20",
+    "next-sitemap": "^3.1.21",
     "npm-check-updates": "^16.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.54.4",
+    "sanitize-html": "^2.7.1",
+    "sass": "^1.54.5",
     "sharp": "^0.30.7",
     "smoothscroll-polyfill": "^0.4.4"
   },

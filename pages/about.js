@@ -5,6 +5,9 @@ import React, { useContext, useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/future/image"
 
+import sanitizeHtml from 'sanitize-html';
+import parse from 'html-react-parser';
+
 // Components
 import MetaComponent from "../components/meta_component"
 
@@ -34,7 +37,7 @@ export default function About({projectData, sectionData}) {
         <div className="hero-box">
           <div className="hero-column writer">
             <h1>{hero.title}</h1>
-            <p className="font-weight-700">{hero.description}</p>
+            <p className="font-weight-700 grey-900-cl">{hero.description}</p>
           </div>
         </div>
       </div>
@@ -42,12 +45,13 @@ export default function About({projectData, sectionData}) {
       {/* Content */}
       <div className="content writer">
         <div className="content-box">
+          <div className={`content-row`}>
             {/* Blocks */}
             {filterBlocks.map((block, index) => {
               let setBlock
               if (block.type_of === "text") {
                 setBlock =
-                  <div dangerouslySetInnerHTML={{ __html: block.text }} />
+                  parse(sanitizeHtml(block.text));
               } else if (block.type_of === "image") {
                 setBlock =
                   <figure>
@@ -67,13 +71,12 @@ export default function About({projectData, sectionData}) {
                   </figure>
               }
               return (
-                <div key={block.uid} className={`content-row`}>
-                  <div className={`content-inner float-right`}>
-                    {setBlock}
-                  </div>
+                <div key={block.uid} className={`content-inner float-right`}>
+                  {setBlock}
                 </div>
               )
             })}
+          </div>
         </div>
       </div>
     </div>
