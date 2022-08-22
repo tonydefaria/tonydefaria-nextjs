@@ -8,7 +8,7 @@ import parse from "html-react-parser";
 
 export default function TextBlockComponent({block}) {
   return (
-    <div key={block.uid} className="writer-block">
+    <div className="writer-block">
       {parse(sanitizeHtml(block.text))}
     </div>
   )

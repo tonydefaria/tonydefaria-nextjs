@@ -53,7 +53,7 @@ export default function About({projectData, sectionData}) {
               setBlock = <ImageBlockComponent block={block} />
             }
             return (
-              <div className="content-row writer-box">
+              <div key={block.uid} className="content-row writer-box">
                 <div className="content-inner float-right">
                   {setBlock}
                 </div>

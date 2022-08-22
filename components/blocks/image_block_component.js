@@ -6,7 +6,7 @@ import Image from "next/future/image"
 
 export default function ImageBlockComponent({block}) {
   return (
-    <div key={block.uid} className="writer-block">
+    <div className="writer-block">
       <figure>
         <picture>
           <Image
