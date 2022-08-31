@@ -10,6 +10,7 @@ import MetaComponent from "../components/meta_component"
 
 // Layout
 import Layout from "../layouts/primary"
+import Headroom from "headroom.js"
 
 export default function Index({projectData, sectionData}) {
   // Props
@@ -37,11 +38,12 @@ export default function Index({projectData, sectionData}) {
                   height={hero.height}
                   quality={75}
                   priority="true"
-                  sizes="(max-width: 959px) 75vw, (min-width: 960px) 50vw, 100vw"
+                  sizes="(max-width: 959px) 75vw, (min-width: 960px) 65vw, 100vw"
                   alt={`Tony de Faria - Home - ${hero.uid}`}
                   title="Tony de Faria"
                 />
               </picture>
+              <figcaption>{hero.caption}</figcaption>
             </figure>
           </div>
           <div className="hero-row">

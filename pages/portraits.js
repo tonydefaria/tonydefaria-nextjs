@@ -19,13 +19,23 @@ export default function Portraits({projectData, sectionData}) {
 
   // Effect
   useEffect(() => {
+    let getImages = document.querySelectorAll("img.portraits-image");
+    getImages.forEach(function (elem) {
+      const grandParent = elem.parentNode.parentNode.parentNode
+      if (elem.naturalWidth > elem.naturalHeight) {
+        grandParent.classList.add("landscape");
+      } else if (elem.naturalWidth < elem.naturalHeight) {
+        grandParent.classList.add("portrait");
+      } else {
+        grandParent.classList.add("square");
+      }
+    });
   }, [])
 
   return (
     <div className="page">
       {/* Meta */}
       <MetaComponent project={project} meta={meta} />
-
 
       {/* Hero */}
       <div className="hero">
@@ -36,38 +46,52 @@ export default function Portraits({projectData, sectionData}) {
         </div>
       </div>
 
-      {/* Portraits */}
-      {images.map((image, index) => {
+      <div className="portraits">
+        <div className="portraits-box">
+          {/* Portraits */}
+          {images.map((image, index) => {
 
-        let setPriority
-        if (index <= 2) {
-          setPriority = true
-        } else {
-          setPriority = false
-        }
+            let setPriority
+            if (index <= 2) {
+              setPriority = true
+            } else {
+              setPriority = false
+            }
 
-        return (
-          <div key={image.uid}>
-            <div>
-              <figure>
-                <picture>
-                  <Image
-                    src={image.image}
-                    width={image.width}
-                    height={image.height}
-                    quality={75}
-                    priority={setPriority}
-                    sizes="(max-width: 959px) 75vw, (min-width: 960px) 50vw, 100vw"
-                    alt={`Tony de Faria - Portrait - ${image.uid}`}
-                    title="Tony de Faria"
-                  />
-                </picture>
-                <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
-              </figure>
-            </div>
-          </div>
-        )
-      })}
+            let setAlignment
+            if (image.align === "left") {
+              setAlignment = "float-left"
+            } else if (image.align === "center") {
+              setAlignment = "flex-h-center"
+            } else if (image.align === "right") {
+              setAlignment = "float-right"
+            }
+
+            return (
+              <div className={`portraits-row ${setAlignment}`} key={image.uid}>
+                <div className={`portraits-item`}>
+                  <figure>
+                    <picture>
+                      <Image
+                        className="portraits-image"
+                        src={image.image}
+                        width={image.width}
+                        height={image.height}
+                        quality={75}
+                        priority={setPriority}
+                        sizes="(max-width: 959px) 75vw, (min-width: 960px) 65vw, 100vw"
+                        alt={`Tony de Faria - Portrait - ${image.uid}`}
+                        title="Tony de Faria"
+                      />
+                    </picture>
+                    <figcaption>{image.caption}</figcaption>
+                  </figure>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </div>
   )
 }

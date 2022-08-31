@@ -11,19 +11,19 @@
   },
   "dependencies": {
     "headroom.js": "^0.12.0",
-    "html-react-parser": "^3.0.3",
+    "html-react-parser": "^3.0.4",
     "next": "12.2.5",
     "next-sitemap": "^3.1.21",
-    "npm-check-updates": "^16.0.5",
+    "npm-check-updates": "^16.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sanitize-html": "^2.7.1",
-    "sass": "^1.54.5",
+    "sass": "^1.54.7",
     "sharp": "^0.30.7",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
-    "eslint": "8.22.0",
+    "eslint": "8.23.0",
     "eslint-config-next": "12.2.5"
   }
 }
