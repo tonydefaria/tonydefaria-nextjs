@@ -10,7 +10,6 @@ import MetaComponent from "../components/meta_component"
 
 // Layout
 import Layout from "../layouts/primary"
-import Headroom from "headroom.js"
 
 export default function Index({projectData, sectionData}) {
   // Props
@@ -50,7 +49,7 @@ export default function Index({projectData, sectionData}) {
             <p className="font-weight-700 text-align-center">{hero.subtitle}</p>
             <hr className="separator-xxs" />
             <div className="width-wide flex-h-center">
-              <Link href="/about"><a className="link-s link-blue-grey underline">{hero.cta_label}</a></Link>
+              <Link href="/about"><a className="link-s underline link-blue-black">{hero.cta_label}</a></Link>
             </div>
           </div>
         </div>

@@ -36,7 +36,7 @@ export default function About({projectData, sectionData}) {
         <div className="hero-box">
           <div className="hero-column writer">
             <h1>{hero.title}</h1>
-            <p className="font-weight-700 grey-900-cl">{hero.description}</p>
+            <p className="font-weight-700">{hero.description}</p>
           </div>
         </div>
       </div>

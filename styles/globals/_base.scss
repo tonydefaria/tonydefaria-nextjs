@@ -23,19 +23,19 @@
 
 ::-moz-selection {
   background-color: $blue-500;
-  color: $grey-000;
+  color: $white;
 }
 
 ::selection {
   background-color: $blue-500;
-  color: $grey-000;
+  color: $white;
 }
 
 html,
 body {
   @include font-size-m;
-  background-color: $grey-000;
-  color: $grey-900;
+  background-color: $black-000;
+  color: $black-900;
   font-display: swap;
   font-family: $sans;
   letter-spacing: .030em;
@@ -66,10 +66,10 @@ button,
 }
 
 a {
-  color: $grey-900;
+  color: $black-900;
   &:link,
   &:visited {
-    color: $grey-900;
+    color: $black-900;
   }
   &:hover,
   &:active {
@@ -85,7 +85,7 @@ figure {
   width: 100%;
   figcaption {
     background-color: transparent;
-    color: $grey-900;
+    color: $black-900;
     display: block;
     font-size: 12px;
     font-weight: 700;

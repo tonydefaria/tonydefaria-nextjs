@@ -92,18 +92,6 @@
   }
 }
 
-@mixin separator-dashed {
-  border-top: 1px dashed $grey-300;
-}
-
-@mixin separator-dotted {
-  border-top: 1px dotted $grey-300;
-}
-
-@mixin separator-solid {
-  border-top: 1px solid $grey-300;
-}
-
 // Classes
 // -------------------------------------------------------------
 .separator-xxs    { @include separator-xxs; }
@@ -113,6 +101,3 @@
 .separator-l      { @include separator-l; }
 .separator-xl     { @include separator-xl; }
 .separator-xxl    { @include separator-xxl; }
-.separator-dashed { @include separator-dashed; }
-.separator-dotted { @include separator-dotted; }
-.separator-solid  { @include separator-solid; }

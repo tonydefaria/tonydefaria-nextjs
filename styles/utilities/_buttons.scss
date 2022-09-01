@@ -3,7 +3,7 @@
 // -------------------------------------------------------------
 
 @mixin button-default {
-  @include button-grey-blue;
+  @include button-blue-black;
   appearance: none;
   border: 0;
   border-radius: 3px;
@@ -95,48 +95,48 @@
 
 // Button Colours
 
-@mixin button-grey {
+@mixin button-black {
   &:link,
   &:visited {
-    background-color: $grey-900;
-    color: $grey-000;
-    .icon { svg * { fill: $grey-000; } }
+    background-color: $black-900;
+    color: $white;
+    .icon { svg * { fill: $white; } }
   }
   &:hover,
   &:active {
-    background-color: $grey-900;
-    color: $grey-000;
-    .icon { svg * { fill: $grey-000; } }
+    background-color: $black-900;
+    color: $white;
+    .icon { svg * { fill: $white; } }
   }
 }
 
-@mixin button-grey-blue {
+@mixin button-black-blue {
   &:link,
   &:visited {
-    background-color: $grey-900;
-    color: $grey-000;
-    .icon { svg * { fill: $grey-000; } }
+    background-color: $black-900;
+    color: $white;
+    .icon { svg * { fill: $white; } }
   }
   &:hover,
   &:active {
     background-color: $blue-500;
-    color: $grey-000;
-    .icon { svg * { fill: $grey-000; } }
+    color: $white;
+    .icon { svg * { fill: $white; } }
   }
 }
 
-@mixin button-blue-grey {
+@mixin button-blue-black {
   &:link,
   &:visited {
     background-color: $blue-500;
-    color: $grey-000;
-    .icon { svg * { fill: $grey-000; } }
+    color: $white;
+    .icon { svg * { fill: $white; } }
   }
   &:hover,
   &:active {
-    background-color: $grey-900;
-    color: $grey-000;
-    .icon { svg * { fill: $grey-000; } }
+    background-color: $black-900;
+    color: $white;
+    .icon { svg * { fill: $white; } }
   }
 }
 
@@ -147,6 +147,6 @@
 .button-m { @include button-m; }
 .button-l { @include button-l; }
 
-.button-grey      { @include button-grey; }
-.button-grey-blue { @include button-grey-blue; }
-.button-blue-grey { @include button-blue-grey; }
+.button-black      { @include button-black; }
+.button-black-blue { @include button-black-blue; }
+.button-blue-black { @include button-blue-black; }

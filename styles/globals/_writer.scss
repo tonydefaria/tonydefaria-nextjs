@@ -25,7 +25,6 @@ $class: "writer";
 
   p {
     @include font-size-m;
-    color: $grey-700;
     a { text-decoration-thickness: 4px; }
   }
 
