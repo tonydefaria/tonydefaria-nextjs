@@ -15,6 +15,8 @@ export default function Contact({projectData, sectionData}) {
   const project = projectData.project
   const meta = sectionData.section.meta_tag
   const hero = sectionData.section.blocks.find(({uid}) => uid === "97jSqZqqUvzZmFeZH3rPXSa3")
+  const global_email = projectData.project.global_attributes.find(({name}) => name === "email")
+  const social_networks = projectData.project.social_networks
 
   // Effect
   useEffect(() => {
@@ -30,6 +32,9 @@ export default function Contact({projectData, sectionData}) {
         <div className="hero-box">
           <div className="hero-column">
             <h1>{hero.title}</h1>
+            <hr className="separator-xl" />
+            <p className="font-weight-700">{hero.description}</p>
+            <hr className="separator-xxl" />
           </div>
         </div>
       </div>

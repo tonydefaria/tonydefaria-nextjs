@@ -1,4 +1,4 @@
-// About
+// My Story
 
 // Built-in Components
 import React, { useContext, useState, useEffect } from "react"
@@ -13,7 +13,7 @@ import ImageBlockComponent from "../components/blocks/image_block_component"
 // Layout
 import Layout from "../layouts/primary"
 
-export default function About({projectData, sectionData}) {
+export default function MyStory({projectData, sectionData}) {
   // Props
   const project = projectData.project
   const meta = sectionData.section.meta_tag
@@ -36,6 +36,7 @@ export default function About({projectData, sectionData}) {
         <div className="hero-box">
           <div className="hero-column writer">
             <h1>{hero.title}</h1>
+            <hr className="separator-xl" />
             <p className="font-weight-700">{hero.description}</p>
           </div>
         </div>
@@ -97,4 +98,4 @@ export async function getStaticProps() {
   }
 }
 
-About.Layout = Layout
+MyStory.Layout = Layout

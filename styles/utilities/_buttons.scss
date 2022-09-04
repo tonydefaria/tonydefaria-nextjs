@@ -96,6 +96,9 @@
 // Button Colours
 
 @mixin button-black {
+  background-color: $black-900;
+  color: $white;
+  .icon { svg * { fill: $white; } }
   &:link,
   &:visited {
     background-color: $black-900;
@@ -111,6 +114,9 @@
 }
 
 @mixin button-black-blue {
+  background-color: $black-900;
+  color: $white;
+  .icon { svg * { fill: $white; } }
   &:link,
   &:visited {
     background-color: $black-900;
@@ -126,6 +132,9 @@
 }
 
 @mixin button-blue-black {
+  background-color: $blue-500;
+  color: $white;
+  .icon { svg * { fill: $white; } }
   &:link,
   &:visited {
     background-color: $blue-500;

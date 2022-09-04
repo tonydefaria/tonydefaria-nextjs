@@ -15,6 +15,7 @@
   &.underline {
     text-decoration-line: underline;
     text-decoration-thickness: 8px;
+    text-underline-offset: 12px;
   }
   &.hover-underline {
     &:hover,
@@ -44,6 +45,7 @@
   @media #{$mobile} {
     &.underline {
       text-decoration-thickness: 6px;
+      text-underline-offset: 8px;
     }
     &.hover-underline {
       &:hover,
@@ -64,6 +66,7 @@
   &.underline {
     text-decoration-line: underline;
     text-decoration-thickness: 6px;
+    text-underline-offset: 8px;
   }
   &.hover-underline {
     &:hover,
@@ -89,6 +92,7 @@
 
     &.underline {
       text-decoration-thickness: 4px;
+      text-underline-offset: 6px;
     }
     &.hover-underline {
       &:hover,
@@ -105,6 +109,7 @@
   &.underline {
     text-decoration-line: underline;
     text-decoration-thickness: 8px;
+    text-underline-offset: 12px;
   }
   &.hover-underline {
     &:hover,
@@ -130,6 +135,7 @@
 
     &.underline {
       text-decoration-thickness: 6px;
+      text-underline-offset: 8px;
     }
     &.hover-underline {
       &:hover,
@@ -146,6 +152,7 @@
   &.underline {
     text-decoration-line: underline;
     text-decoration-thickness: 10px;
+    text-underline-offset: 14px;
   }
   &.hover-underline {
     &:hover,
@@ -170,6 +177,7 @@
     .icon { margin: 0; }
     &.underline {
       text-decoration-thickness: 8px;
+      text-underline-offset: 12px;
     }
     &.hover-underline {
       &:hover,

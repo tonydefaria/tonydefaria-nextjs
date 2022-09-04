@@ -28,9 +28,9 @@ export default function MenuComponent() {
       <div className="menu-wrapper">
         <ul className="menu-box">
           <li className="menu-item flex-h-center">
-            <Link href="/about">
+            <Link href="/my-story">
               <a className="link underline" onClick={() => { toggleMenu(); trackMenuPortraitsCabin();}}>
-                About
+                My Story
               </a>
             </Link>
           </li>

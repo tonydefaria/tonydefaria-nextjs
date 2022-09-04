@@ -13,7 +13,7 @@ $class: "portraits";
     width: 100%;
     .#{$class}-row {
       float: left;
-      padding: 16px 16px 256px;
+      padding: 0 0 256px;
       width: 100%;
       &.float-left {
         .#{$class}-item {
@@ -52,7 +52,7 @@ $class: "portraits";
   .#{$class} {
     .#{$class}-box {
       .#{$class}-row {
-        padding: 16px 16px 128px;
+        padding: 0 0 128px;
       }
       .#{$class}-item {
         &.portrait {

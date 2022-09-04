@@ -59,13 +59,13 @@ export default function Typography({projectData}) {
         <p>Ultricies lacus sed turpis tincidunt. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Leo in vitae turpis massa sed elementum. Nullam eget felis <a href="#">lorem ipsum</a> nunc lobortis mattis. Enim ut tellus elementum sagittis vitae et leo. Vel eros donec ac odio tempor. Ultrices dui sapien eget mi proin sed. Enim ut sem viverra aliquet eget sit amet tellus cras.</p>
 
         <hr className="separator-xxl" />
-        <a href="#" className="link underline">Link</a>
+        <a href="#" className="link underline">Link great for a question joker pictue story</a>
         <hr className="separator-xxl" />
-        <a href="#" className="link-s underline">Link S</a>
+        <a href="#" className="link-s underline">Link S great for a question joker pictue story</a>
         <hr className="separator-xxl" />
-        <a href="#" className="link-m underline">Link M</a>
+        <a href="#" className="link-m underline">Link M great for a question joker pictue story</a>
         <hr className="separator-xxl" />
-        <a href="#" className="link-l underline">Link L</a>
+        <a href="#" className="link-l underline">Link L great for a question joker pictue story</a>
         <hr className="separator-xxl" />
       </div>
     </div>
