@@ -4,10 +4,16 @@
 import React, { useContext } from "react"
 import Link from "next/link"
 
+// Components
+import SocialNetworksComponent from "../components/social_networks_component"
+
 // Context
 import { menuToggleContext } from "../components/header_component"
 
-export default function MenuComponent() {
+export default function MenuComponent({project}) {
+  // Props
+  const social_networks = project.social_networks
+
   // Context
   const [isOpen, setIsOpen] = useContext(menuToggleContext)
 
@@ -28,16 +34,16 @@ export default function MenuComponent() {
       <div className="menu-wrapper">
         <ul className="menu-box">
           <li className="menu-item flex-h-center">
-            <Link href="/my-story">
+            <Link href="/portraits">
               <a className="link underline" onClick={() => { toggleMenu(); trackMenuPortraitsCabin();}}>
-                My Story
+                Portraits
               </a>
             </Link>
           </li>
           <li className="menu-item flex-h-center">
-            <Link href="/portraits">
+            <Link href="/about">
               <a className="link underline" onClick={() => { toggleMenu(); trackMenuPortraitsCabin();}}>
-                Portraits
+                About
               </a>
             </Link>
           </li>
@@ -48,6 +54,9 @@ export default function MenuComponent() {
               </a>
             </Link>
           </li>
+        </ul>
+        <ul className="menu-box flex-h-center">
+          <SocialNetworksComponent social_networks={social_networks} />
         </ul>
       </div>
     </div>

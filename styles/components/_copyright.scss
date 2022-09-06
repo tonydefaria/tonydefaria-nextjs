@@ -23,9 +23,8 @@ $class: "copyright";
   .#{$class} {
     width: 100%;
     .#{$class}-box {
-      padding: 0 16px 16px;
+      padding: 0;
       .#{$class}-item {
-        padding: 8px 16px 16px;
         p { line-height: 24px; }
       }
     }

@@ -72,12 +72,15 @@ $class: "menu";
   .#{$class} {
     .#{$class}-box {
       width: 100%;
+      &:last-child {
+        padding: 0 32px 32px;
+      }
       .#{$class}-item {
         padding: 0 0 32px;
         .link {
-          font-size: 48px;
-          line-height: 64px;
-          text-underline-offset: 16px;
+          font-size: 32px;
+          line-height: 48px;
+          text-underline-offset: 14px;
           &.underline {
             text-decoration-line: underline;
             text-decoration-thickness: 8px;

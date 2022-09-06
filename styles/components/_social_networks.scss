@@ -1,16 +1,18 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File: Sitemap
+// File: Social Networks
 // -------------------------------------------------------------
 
-$class: "sitemap";
+$class: "social-networks";
 
 .#{$class} {
   float: right;
   .#{$class}-box {
     float: left;
     padding: 16px;
+    width: auto;
     .#{$class}-item {
       float: left;
+      margin: 0;
       padding: 16px;
     }
   }
@@ -22,15 +24,8 @@ $class: "sitemap";
   .#{$class} {
     width: 100%;
     .#{$class}-box {
-      padding: 16px 16px 0;
+      padding: 0;
       .#{$class}-item {
-        padding: 16px 8px 8px;
-        &:first-child {
-          padding-left: 16px;
-        }
-        &:last-child {
-          padding-right: 16px;
-        }
       }
     }
   }

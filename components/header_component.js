@@ -12,7 +12,7 @@ import MenuComponent from "../components/menu_component"
 // Context
 export const menuToggleContext = React.createContext()
 
-export default function HeaderComponent() {
+export default function HeaderComponent({project}) {
   // State
   const [isOpen, setIsOpen] = useState(false)
 
@@ -42,7 +42,7 @@ export default function HeaderComponent() {
       <header className="universal header" id="header">
         <BrandComponent />
         <HamburgerComponent />
-        <MenuComponent />
+        <MenuComponent project={project} />
       </header>
     </menuToggleContext.Provider>
   )

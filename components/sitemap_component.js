@@ -14,13 +14,13 @@ export default function SitemapComponent() {
           </Link>
         </div>
         <div className="sitemap-item">
-          <Link href="/my-story">
-            <a className="link-s underline">My Story</a>
+          <Link href="/portraits">
+            <a className="link-s underline">Portraits</a>
           </Link>
         </div>
         <div className="sitemap-item">
-          <Link href="/portraits">
-            <a className="link-s underline">Portraits</a>
+          <Link href="/about">
+            <a className="link-s underline">About</a>
           </Link>
         </div>
         <div className="sitemap-item">
