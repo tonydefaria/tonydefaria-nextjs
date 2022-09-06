@@ -19,7 +19,7 @@ export default function Portraits({projectData, sectionData}) {
 
   // Effect
   useEffect(() => {
-    let getImages = document.querySelectorAll("img.portraits-image");
+    let getImages = document.querySelectorAll("img.portraits-orientation");
     getImages.forEach(function (elem) {
       const grandParent = elem.parentNode.parentNode.parentNode
       if (elem.naturalWidth > elem.naturalHeight) {
@@ -75,7 +75,6 @@ export default function Portraits({projectData, sectionData}) {
                   <figure>
                     <picture>
                       <Image
-                        className="portraits-image"
                         src={image.image}
                         width={image.width}
                         height={image.height}
@@ -84,6 +83,7 @@ export default function Portraits({projectData, sectionData}) {
                         sizes="(max-width: 959px) 75vw, (min-width: 960px) 65vw, 100vw"
                         alt={`Tony de Faria - Portrait - ${image.uid}`}
                         title="Tony de Faria"
+                        className="portraits-orientation"
                       />
                     </picture>
                     <figcaption>{image.caption}</figcaption>

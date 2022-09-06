@@ -14,10 +14,10 @@ export default function ImageBlockComponent({block}) {
             width={block.width}
             height={block.height}
             quality={100}
-            alt={`Tony de Faria - Portrait - ${block.uid}`}
+            alt={`Tony de Faria - Image Block - ${block.uid}`}
             title="Tony de Faria"
             priority="true"
-            sizes="(max-width: 959px) 75vw, (min-width: 960px) 50vw, 100vw"
+            sizes="(max-width: 959px) 75vw, (min-width: 960px) 65vw, 100vw"
           />
         </picture>
         <figcaption>{block.caption}</figcaption>

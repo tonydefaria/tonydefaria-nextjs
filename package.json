@@ -19,7 +19,7 @@
     "react-dom": "18.2.0",
     "sanitize-html": "^2.7.1",
     "sass": "^1.54.8",
-    "sharp": "^0.30.7",
+    "sharp": "^0.31.0",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
