@@ -5,6 +5,7 @@ import React, { useContext, useState, useEffect } from "react"
 import smoothscroll from 'smoothscroll-polyfill';
 
 // Components
+import FaviconComponent from "../components/favicon_component"
 import HeaderComponent from "../components/header_component"
 import FooterComponent from "../components/footer_component"
 
@@ -36,6 +37,9 @@ export default function Primary({ children }) {
 
   return (
     <div className="primary lock-menu scroll" id="primary">
+      {/* Favicon */}
+      <FaviconComponent project={project} />
+
       {/* Header */}
       <HeaderComponent project={project} />
 

@@ -34,7 +34,7 @@ export default function MyStory({projectData, sectionData}) {
       {/* Hero */}
       <div className="hero">
         <div className="hero-box">
-          <div className="hero-column writer">
+          <div className="hero-column">
             <h1>{hero.title}</h1>
             <hr className="separator-xl" />
             <p className="font-weight-700">{hero.description}</p>

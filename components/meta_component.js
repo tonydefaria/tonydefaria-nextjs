@@ -37,6 +37,8 @@ export default function MetaComponent({project, meta}) {
       <meta name="twitter:title"        content={title} />
       <meta name="twitter:description"  content={description} />
       <meta name="twitter:image"        content={image} />
+      {/* Pinterest */}
+      <meta name="p:domain_verify"      content="4798813e2e3fdec2ffbb1fae9109b056"/>
       {/* Preloaders */}
       <link rel="dns-prefetch" href="https://use.typekit.net/sjv6gba.css" />
     </Head>
