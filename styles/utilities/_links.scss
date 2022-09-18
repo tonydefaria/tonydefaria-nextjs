@@ -3,6 +3,7 @@
 // -------------------------------------------------------------
 
 @mixin link-default {
+  @include hover-animation(.5s);
   @include link-black-blue;
   appearance: none;
   background-color: transparent;
@@ -12,6 +13,16 @@
   font-weight: 900;
   letter-spacing: .030em;
   width: auto;
+  &:link,
+  &:visited {
+    @include hover-animation(.5s);
+    .icon { object, svg, svg * { @include hover-animation(.5s); } }
+  }
+  &:hover,
+  &:active {
+    @include hover-animation(.5s);
+    .icon { object, svg, svg * { @include hover-animation(.5s); } }
+  }
   &.underline {
     text-decoration-line: underline;
     text-decoration-thickness: 8px;
@@ -22,8 +33,10 @@
     &:active {
       text-decoration-line: underline;
       text-decoration-thickness: 8px;
+      text-underline-offset: 12px;
     }
   }
+
   span,
   .icon {
     display: block;
@@ -32,9 +45,7 @@
     width: auto;
     object,
     img,
-    svg,
-    svg * {
-      @include hover-animation(.5s);
+    svg {
       border: none;
       float: left;
       margin: 0;
@@ -51,6 +62,7 @@
       &:hover,
       &:active {
         text-decoration-thickness: 6px;
+        text-underline-offset: 8px;
       }
     }
   }
@@ -73,23 +85,11 @@
     &:active {
       text-decoration-line: underline;
       text-decoration-thickness: 6px;
-    }
-  }
-  .icon {
-    height: 24px;
-    margin: 4px 0;
-    &.float-left { margin-right: 8px; }
-    &.float-right { margin-left: 8px; }
-    object,
-    img,
-    svg {
-      height: 24px;
+      text-underline-offset: 8px;
     }
   }
 
   @media #{$mobile} {
-    .icon { margin: 0; }
-
     &.underline {
       text-decoration-thickness: 4px;
       text-underline-offset: 6px;
@@ -98,6 +98,7 @@
       &:hover,
       &:active {
         text-decoration-thickness: 4px;
+        text-underline-offset: 6px;
       }
     }
   }
@@ -116,23 +117,11 @@
     &:active {
       text-decoration-line: underline;
       text-decoration-thickness: 8px;
-    }
-  }
-  .icon {
-    height: 32px;
-    margin: 4px 0;
-    &.float-left { margin-right: 10px; }
-    &.float-right { margin-left: 10px; }
-    object,
-    img,
-    svg {
-      height: 32px;
+      text-underline-offset: 12px;
     }
   }
 
   @media #{$mobile} {
-    .icon { margin: 0; }
-
     &.underline {
       text-decoration-thickness: 6px;
       text-underline-offset: 8px;
@@ -141,6 +130,7 @@
       &:hover,
       &:active {
         text-decoration-thickness: 6px;
+        text-underline-offset: 8px;
       }
     }
   }
@@ -159,22 +149,11 @@
     &:active {
       text-decoration-line: underline;
       text-decoration-thickness: 10px;
-    }
-  }
-  .icon {
-    height: 40px;
-    margin: 4px 0;
-    &.float-left { margin-right: 12px; }
-    &.float-right { margin-left: 12px; }
-    object,
-    img,
-    svg {
-      height: 40px;
+      text-underline-offset: 14px;
     }
   }
 
   @media #{$mobile} {
-    .icon { margin: 0; }
     &.underline {
       text-decoration-thickness: 8px;
       text-underline-offset: 12px;
@@ -183,6 +162,7 @@
       &:hover,
       &:active {
         text-decoration-thickness: 8px;
+        text-underline-offset: 12px;
       }
     }
   }

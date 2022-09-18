@@ -7,6 +7,7 @@ import Headroom from "headroom.js"
 // Components
 import BrandComponent from "./brand_component"
 import HamburgerComponent from "./hamburger_component"
+import ShopComponent from "./shop_component"
 import MenuComponent from "../components/menu_component"
 
 // Context
@@ -42,6 +43,7 @@ export default function HeaderComponent({project}) {
       <header className="universal header" id="header">
         <BrandComponent />
         <HamburgerComponent />
+        <ShopComponent />
         <MenuComponent project={project} />
       </header>
     </menuToggleContext.Provider>

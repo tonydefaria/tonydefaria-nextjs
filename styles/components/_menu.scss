@@ -25,32 +25,18 @@ $class: "menu";
   }
   .#{$class}-box {
     float: left;
-    padding: 32px;
+    padding: 72px 32px 32px;
     width: 100%;
+    &:last-child {
+      padding: 0 32px 32px;
+    }
     .#{$class}-item {
       float: left;
-      padding: 0 0 72px;
+      padding: 0 0 32px;
       margin: 0;
       width: 100%;
       &:last-child {
         padding: 0;
-      }
-      .link {
-        font-size: 96px;
-        line-height: 128px;
-        text-underline-offset: 32px;
-        &.underline {
-          text-decoration-line: underline;
-          text-decoration-thickness: 16px;
-        }
-        &.hover-underline {
-          &:hover,
-          &:active {
-            // text-decoration: underline;
-            text-decoration-line: underline;
-            text-decoration-thickness: 16px;
-          }
-        }
       }
     }
   }
@@ -71,29 +57,8 @@ $class: "menu";
 @media #{$mobile} {
   .#{$class} {
     .#{$class}-box {
-      width: 100%;
-      &:last-child {
-        padding: 0 32px 32px;
-      }
       .#{$class}-item {
-        padding: 0 0 32px;
-        .link {
-          font-size: 32px;
-          line-height: 48px;
-          text-underline-offset: 14px;
-          &.underline {
-            text-decoration-line: underline;
-            text-decoration-thickness: 8px;
-          }
-          &.hover-underline {
-            &:hover,
-            &:active {
-              // text-decoration: underline;
-              text-decoration-line: underline;
-              text-decoration-thickness: 8px;
-            }
-          }
-        }
+        padding: 0 0 24px;
       }
     }
   }

@@ -49,7 +49,7 @@ export default function Index({projectData, sectionData}) {
             <p className="font-weight-700 text-align-center">{hero.subtitle}</p>
             <hr className="separator-xxs" />
             <div className="width-wide flex-h-center">
-              <Link href="/my-story"><a className="link-s underline link-blue-black">{hero.cta_label}</a></Link>
+              <Link href="/about"><a className="link-s underline link-blue-black">{hero.cta_label}</a></Link>
             </div>
           </div>
         </div>

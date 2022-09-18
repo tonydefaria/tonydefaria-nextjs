@@ -33,6 +33,26 @@
   @include button-default;
 }
 
+@mixin button-shop {
+  @include button-default;
+  font-size: 12px;
+  line-height: 32px;
+  padding: 0 16px;
+  .icon {
+    height: 24px;
+    margin: 4px 0;
+    &.float-left { margin-right: 8px; }
+    &.float-right { margin-left: 8px; }
+  }
+
+  // Mobile
+  // -------------------------------------------------------------
+  @media #{$mobile} {
+    font-size: 12px;
+    .icon { margin: 0; }
+  }
+}
+
 @mixin button-s {
   @include button-default;
   @include font-size-s;
@@ -151,10 +171,11 @@
 
 // Classes
 // -------------------------------------------------------------
-.button   { @include button; }
-.button-s { @include button-s; }
-.button-m { @include button-m; }
-.button-l { @include button-l; }
+.button       { @include button; }
+.button-shop  { @include button-shop; }
+.button-s     { @include button-s; }
+.button-m     { @include button-m; }
+.button-l     { @include button-l; }
 
 .button-black      { @include button-black; }
 .button-black-blue { @include button-black-blue; }
