@@ -20,7 +20,6 @@
 /builder/*
 .DS_Store
 *.pem
-tonydefaria.code-workspace
 TODO
 TODO/*
 trash
