@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @tonydefaria
 - 👀 I’m interested in geographic politics & sociocultural similarities.
 - 🌱 I’m currently learning how to think and write like a journalist.
-- 💞️ I’m looking to collaborate on openai concepts and develop tools for content management.
+- 💞️ I’m looking to collaborate on openai concepts and develop tools for content creation.
 - 📫 Get in touch with me@tonydefaria.com
