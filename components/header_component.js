@@ -43,7 +43,7 @@ export default function HeaderComponent({project}) {
       <header className="universal header" id="header">
         <BrandComponent />
         <HamburgerComponent />
-        <ShopComponent />
+        {/* <ShopComponent /> */}
         <MenuComponent project={project} />
       </header>
     </menuToggleContext.Provider>

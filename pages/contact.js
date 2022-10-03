@@ -34,15 +34,15 @@ export default function Contact({projectData, sectionData}) {
             <hr className="separator-xl" />
             <p className="font-weight-700">{hero.description}</p>
             <hr className="separator-xxl" />
-            <p className="font-size-xs">My email:</p>
-            <p className="font-size-m font-weight-900">{global_email.value}</p>
-            <hr className="separator-s" />
-            <p className="font-size-xs">My social media accounts:</p>
+            <p className="font-size-xs">Email:</p>
+            <p className="font-size-s font-weight-900">{global_email.value}</p>
+            <hr className="separator-m" />
+            <p className="font-size-xs">Social media:</p>
             <div className="hero-menu">
               <ul className="hero-menu-box left">
                 {social_networks.map((social_network) => (
                   <li key={social_network.uid} className="hero-menu-item">
-                    <a href={social_network.url} target="_blank" rel="noreferrer noopener" className="link-m underline">{social_network.name}</a>
+                    <a href={social_network.url} target="_blank" rel="noreferrer noopener" className="link-s underline">{social_network.name}</a>
                   </li>
                 ))}
               </ul>
