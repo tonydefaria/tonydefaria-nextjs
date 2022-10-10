@@ -22,7 +22,7 @@ export default function MenuComponent({project}) {
     setTimeout(function() {
       setIsOpen(false)
     }, 250)
-    window.scrollTo({top: 0, left: 0, right: 0})
+    window.scrollTo({top: 0, right: 0, bottom: 0, left: 0})
   }
 
   // Cabin Events

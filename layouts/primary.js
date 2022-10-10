@@ -25,10 +25,7 @@ export default function Primary({ children }) {
       // const buffer = 0;
       // const top = rectTop + offsetTop - buffer;
       const top = rectTop + offsetTop
-      window.scrollTo({
-        top,
-        behavior: "smooth"
-      });
+      window.scrollTo({top, behavior: "smooth"});
     });
   }, [])
 
@@ -39,10 +36,8 @@ export default function Primary({ children }) {
     <div className="primary lock-menu scroll" id="primary">
       {/* Favicon */}
       <FaviconComponent project={project} />
-
       {/* Header */}
       <HeaderComponent project={project} />
-
       {/* Main */}
       <main className="universal main lock-menu scroll" id="main">
         <div className="universal-box">
@@ -51,7 +46,6 @@ export default function Primary({ children }) {
           </div>
         </div>
       </main>
-
       {/* Footer */}
       <FooterComponent project={project} />
     </div>
