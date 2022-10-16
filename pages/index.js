@@ -17,6 +17,9 @@ export default function Index({projectData, sectionData}) {
   const meta = sectionData.section.meta_tag
   const hero = sectionData.section.blocks.find(({uid}) => uid === "wqq2dxdWkWsqRwjWAbiCEpbx")
 
+  // Cabin Events
+  const trackCTACabin = () => { window.cabin.event("Landing Page CTA") }
+
   return (
     <div className="page" id="top">
       {/* Meta */}
@@ -49,7 +52,11 @@ export default function Index({projectData, sectionData}) {
             <p className="font-weight-700 text-align-center">{hero.subtitle}</p>
             <hr className="separator-xxs" />
             <div className="width-wide flex-h-center">
-              <Link href="/about"><a className="link-s underline link-blue-black">{hero.cta_label}</a></Link>
+              <Link href="/about">
+                <a className="link-s underline link-blue-black" onClick={() => { trackCTACabin(); }}>
+                  {hero.cta_label}
+                </a>
+              </Link>
             </div>
           </div>
         </div>

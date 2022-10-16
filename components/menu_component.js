@@ -27,21 +27,13 @@ export default function MenuComponent({project}) {
 
   // Cabin Events
   const trackMenuPortraitsCabin = () => { window.cabin.event("Menu Portraits") }
+  const trackMenuAboutCabin = () => { window.cabin.event("Menu About") }
   const trackMenuContactCabin = () => { window.cabin.event("Menu Contact") }
 
   return (
     <div className={`menu flex-v-center ${isOpen ? "open" : "closed"}`} id="menu">
       <div className="menu-wrapper">
         <ul className="menu-box">
-          {/*
-          <li className="menu-item flex-h-center">
-            <Link href="/portraits">
-              <a className="link-l underline" onClick={() => { toggleMenu(); trackMenuPortraitsCabin();}}>
-                Stories
-              </a>
-            </Link>
-          </li>
-          */}
           <li className="menu-item flex-h-center">
             <Link href="/portraits">
               <a className="link-l underline" onClick={() => { toggleMenu(); trackMenuPortraitsCabin();}}>
@@ -51,7 +43,7 @@ export default function MenuComponent({project}) {
           </li>
           <li className="menu-item flex-h-center">
             <Link href="/about">
-              <a className="link-l underline" onClick={() => { toggleMenu(); trackMenuPortraitsCabin();}}>
+              <a className="link-l underline" onClick={() => { toggleMenu(); trackMenuAboutCabin();}}>
                 About
               </a>
             </Link>

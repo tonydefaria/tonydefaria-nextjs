@@ -5,11 +5,10 @@ Allow: /
 # *
 User-agent: *
 Disallow: /components
-Disallow: /data
 Disallow: /layouts
-Disallow: /lib
 Disallow: /pages
 Disallow: /styles
+Disallow: /svgs
 
 # Host
 Host: https://www.tonydefaria.com

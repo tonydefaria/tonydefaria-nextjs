@@ -6,7 +6,6 @@ module.exports = {
   changefreq: "weekly",
   priority: 0.8,
   sitemapSize: 5000,
-  // exclude: [""],
   generateRobotsTxt: true,
   exclude: [],
   alternateRefs: [],
@@ -29,12 +28,12 @@ module.exports = {
       {
         userAgent: "*",
         disallow: [
+          "/builders",
           "/components",
-          "/data",
           "/layouts",
-          "/lib",
           "/pages",
-          "/styles"
+          "/styles",
+          "/svgs"
         ]
       }
     ]
