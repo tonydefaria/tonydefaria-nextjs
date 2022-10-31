@@ -9,24 +9,16 @@ export default function SitemapComponent() {
     <div className="sitemap flex-h-center">
       <div className="sitemap-box">
         <div className="sitemap-item">
-          <Link href="/">
-            <a className="link-s underline">Home</a>
-          </Link>
+          <Link href="/" className="link-s underline">Home</Link>
         </div>
         <div className="sitemap-item">
-          <Link href="/portraits">
-            <a className="link-s underline">Portraits</a>
-          </Link>
+          <Link href="/portraits" className="link-s underline">Portraits</Link>
         </div>
         <div className="sitemap-item">
-          <Link href="/about">
-            <a className="link-s underline">About</a>
-          </Link>
+          <Link href="/about" className="link-s underline">About</Link>
         </div>
         <div className="sitemap-item">
-          <Link href="/contact">
-            <a className="link-s underline">Contact</a>
-          </Link>
+          <Link href="/contact" className="link-s underline">Contact</Link>
         </div>
       </div>
     </div>

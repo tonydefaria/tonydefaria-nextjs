@@ -2,7 +2,7 @@
 
 // Built-in Components
 import React, { useContext, useState, useEffect } from "react"
-import Image from "next/future/image"
+import Image from "next/image"
 
 // Components
 import MetaComponent from "../components/meta_component"

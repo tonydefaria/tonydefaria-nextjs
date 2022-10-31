@@ -30,15 +30,11 @@ export default function BrandComponent() {
     <div className="brand">
       <div className="brand-box">
         <div className="brand-item">
-          <Link href="/">
-            <a className="brand-icon link mobile" onClick={() => { trackBrandMobileCabin(); toggleMenu(); }}>
-              <BrandIcon />
-            </a>
+          <Link href="/" className="brand-icon link mobile" onClick={() => { trackBrandMobileCabin(); toggleMenu(); }}>
+            <BrandIcon />
           </Link>
-          <Link href="/">
-            <a className="brand-logo link desktop" onClick={() => { trackBrandDesktopCabin(); toggleMenu(); }}>
-              <BrandLogo />
-            </a>
+          <Link href="/" className="brand-logo link desktop" onClick={() => { trackBrandDesktopCabin(); toggleMenu(); }}>
+            <BrandLogo />
           </Link>
         </div>
       </div>

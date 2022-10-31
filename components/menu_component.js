@@ -35,24 +35,18 @@ export default function MenuComponent({project}) {
       <div className="menu-wrapper">
         <ul className="menu-box">
           <li className="menu-item flex-h-center">
-            <Link href="/portraits">
-              <a className="link-l underline" onClick={() => { toggleMenu(); trackMenuPortraitsCabin();}}>
-                Portraits
-              </a>
+            <Link href="/portraits" className="link-l underline" onClick={() => { toggleMenu(); trackMenuPortraitsCabin();}}>
+              Portraits
             </Link>
           </li>
           <li className="menu-item flex-h-center">
-            <Link href="/about">
-              <a className="link-l underline" onClick={() => { toggleMenu(); trackMenuAboutCabin();}}>
-                About
-              </a>
+            <Link href="/about" className="link-l underline" onClick={() => { toggleMenu(); trackMenuAboutCabin();}}>
+              About
             </Link>
           </li>
           <li className="menu-item flex-h-center">
-            <Link href="/contact">
-              <a className="link-l underline" onClick={() => { toggleMenu(); trackMenuContactCabin();}}>
-                Contact
-              </a>
+            <Link href="/contact" className="link-l underline" onClick={() => { toggleMenu(); trackMenuContactCabin();}}>
+              Contact
             </Link>
           </li>
         </ul>

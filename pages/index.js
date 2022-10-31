@@ -3,7 +3,7 @@
 // Built-in Components
 import React, { useContext, useState, useEffect } from "react"
 import Link from "next/link"
-import Image from "next/future/image"
+import Image from "next/image"
 
 // Components
 import MetaComponent from "../components/meta_component"
@@ -52,11 +52,7 @@ export default function Index({projectData, sectionData}) {
             <p className="font-weight-700 text-align-center">{hero.subtitle}</p>
             <hr className="separator-xxs" />
             <div className="width-wide flex-h-center">
-              <Link href="/about">
-                <a className="link-s underline link-blue-black" onClick={() => { trackCTACabin(); }}>
-                  {hero.cta_label}
-                </a>
-              </Link>
+              <Link href="/about" className="link-s underline link-blue-black" onClick={() => { trackCTACabin(); }}>{hero.cta_label}</Link>
             </div>
           </div>
         </div>

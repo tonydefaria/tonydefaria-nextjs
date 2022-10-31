@@ -10,7 +10,7 @@ export default function ShopComponent() {
     <div className="shop">
       <div className="shop-box">
         <div className="shop-item">
-          <Link href="/"><a className="button-shop">Shop</a></Link>
+          <Link href="/" className="button-shop">Shop</Link>
         </div>
       </div>
     </div>

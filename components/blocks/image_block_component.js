@@ -2,7 +2,7 @@
 
 // Built-in components
 import React, { useContext, useState, useEffect } from "react"
-import Image from "next/future/image"
+import Image from "next/image"
 
 export default function ImageBlockComponent({block}) {
   return (

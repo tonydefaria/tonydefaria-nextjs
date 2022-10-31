@@ -29,12 +29,10 @@ export default function HamburgerComponent() {
     <div className="hamburger">
       <div className="hamburger-box">
         <div className="hamburger-item">
-          <Link href="/">
-            <a className="hamburger-link link" onClick={(event) => { trackHamburgerCabin(); toggleMenu(event); }}>
-              <span className="icon">
-                {isOpen ? <CloseIcon /> : <HamburgerIcon /> }
-              </span>
-            </a>
+          <Link href="/" className="hamburger-link link" onClick={(event) => { trackHamburgerCabin(); toggleMenu(event); }}>
+            <span className="icon">
+              {isOpen ? <CloseIcon /> : <HamburgerIcon /> }
+            </span>
           </Link>
         </div>
       </div>
