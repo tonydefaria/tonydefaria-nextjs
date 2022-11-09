@@ -3,11 +3,6 @@
 const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
-  // experimental: {
-  //   images: {
-  //     allowFutureImage: true,
-  //   }
-  // },
   images: {
     domains: ["hankyo-production.fra1.cdn.digitaloceanspaces.com"],
     deviceSizes: [240, 360, 480, 640, 750, 828, 960, 1080, 1200, 1440, 1920, 2048, 3840],
