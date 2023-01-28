@@ -4,6 +4,7 @@ Allow: /
 
 # *
 User-agent: *
+Disallow: /builders
 Disallow: /components
 Disallow: /layouts
 Disallow: /pages
