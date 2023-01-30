@@ -9,7 +9,7 @@ export default function SocialNetworksComponent({social_networks}) {
       <ul className="social-networks-box">
         {social_networks.map((social_network) => (
           <li key={social_network.uid} className="social-networks-item">
-            <a href={social_network.url} target="_blank" rel="noreferrer noopener" className="link-s underline" onClick={trackSocialNetworkCabin}>{social_network.name}</a>
+            <a href={social_network.url} target="_blank" rel="me noreferrer noopener" className="link-s underline" onClick={trackSocialNetworkCabin}>{social_network.name}</a>
           </li>
         ))}
       </ul>
