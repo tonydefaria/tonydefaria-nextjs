@@ -1,19 +1,28 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File: Social Networks
+// File: Sitemap
 // -------------------------------------------------------------
 
-$class: "social-networks";
+$class: "sitemap";
 
 .#{$class} {
-  float: right;
+  float: left;
   .#{$class}-box {
     float: left;
-    padding: 16px 16px 0;
+    padding: 16px;
     width: auto;
     .#{$class}-item {
       float: left;
       margin: 0;
-      padding: 16px 16px 0;
+      padding: 16px 8px;
+      &:first-child {
+        padding-left: 16px;
+      }
+      &:last-child {
+        padding-right: 16px;
+      }
+      .link-xs {
+        line-height: 32px;
+      }
     }
   }
 }
@@ -27,6 +36,15 @@ $class: "social-networks";
       padding: 8px;
       .#{$class}-item {
         padding: 8px;
+        &:first-child {
+          padding-left: 8px;
+        }
+        &:last-child {
+          padding-right: 8px;
+        }
+        .link-xs {
+          line-height: 24px;
+        }
       }
     }
   }

@@ -8,10 +8,10 @@ $class: "copyright";
   float: left;
   .#{$class}-box {
     float: left;
-    padding: 16px;
+    padding: 16px 16px 0;
     .#{$class}-item {
       float: left;
-      padding: 16px;
+      padding: 16px 16px 0;
       p { line-height: 32px; }
     }
   }
@@ -23,8 +23,9 @@ $class: "copyright";
   .#{$class} {
     width: 100%;
     .#{$class}-box {
-      padding: 0;
+      padding: 8px 8px 0;
       .#{$class}-item {
+        padding: 8px 8px 0;
         p { line-height: 24px; }
       }
     }

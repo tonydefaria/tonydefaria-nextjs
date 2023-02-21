@@ -14,13 +14,13 @@ $class: "universal";
     margin: 0 auto;
     max-width: 1200px;
     padding: 0;
-    .#{$class}-row {
-      float: left;
-      margin: 0 auto;
-      padding: 0;
-      position: relative;
-      width: 100%;
-    }
+  }
+  .#{$class}-row {
+    float: left;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
   }
 }
 
@@ -30,8 +30,8 @@ $class: "universal";
   .#{$class} {
     .#{$class}-box {
       max-width: 959px;
-      .#{$class}-row {
-      }
+    }
+    .#{$class}-row {
     }
   }
 }

@@ -5,6 +5,7 @@ Allow: /
 # *
 User-agent: *
 Disallow: /builders
+Disallow: /disclaimer
 Disallow: /components
 Disallow: /layouts
 Disallow: /pages

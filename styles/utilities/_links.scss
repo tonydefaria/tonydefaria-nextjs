@@ -72,6 +72,38 @@
   @include link-default;
 }
 
+@mixin link-xs {
+  @include link-default;
+  @include font-size-xs;
+  &.underline {
+    text-decoration-line: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;
+  }
+  &.hover-underline {
+    &:hover,
+    &:active {
+      text-decoration-line: underline;
+      text-decoration-thickness: 4px;
+      text-underline-offset: 6px;
+    }
+  }
+
+  @media #{$mobile} {
+    &.underline {
+      text-decoration-thickness: 3px;
+      text-underline-offset: 4px;
+    }
+    &.hover-underline {
+      &:hover,
+      &:active {
+        text-decoration-thickness: 3px;
+        text-underline-offset: 4px;
+      }
+    }
+  }
+}
+
 @mixin link-s {
   @include link-default;
   @include font-size-s;
@@ -222,6 +254,7 @@
 // Classes
 // -------------------------------------------------------------
 .link     { @include link; }
+.link-xs  { @include link-xs; }
 .link-s   { @include link-s; }
 .link-m   { @include link-m; }
 .link-l   { @include link-l; }
