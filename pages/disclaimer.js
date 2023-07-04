@@ -34,8 +34,8 @@ export default function Disclaimer({projectData, sectionData}) {
       {/* Hero */}
       <div className="hero">
         <div className="hero-box">
-          <div className="hero-column">
-            <h1>{hero.title}</h1>
+          <div className="hero-row">
+            <h1 className="header-size-xxl">{hero.title}</h1>
           </div>
         </div>
       </div>

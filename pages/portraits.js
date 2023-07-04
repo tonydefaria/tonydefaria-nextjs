@@ -40,9 +40,10 @@ export default function Portraits({projectData, sectionData}) {
       {/* Hero */}
       <div className="hero">
         <div className="hero-box">
+          <div className="hero-row">
+            <h1 className="header-size-display">{hero.title}</h1>
+          </div>
           <div className="hero-column">
-            <h1>{hero.title}</h1>
-            <hr className="separator-xl" />
             <p className="font-weight-700">{hero.description}</p>
           </div>
         </div>

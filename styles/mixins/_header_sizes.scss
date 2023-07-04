@@ -72,13 +72,12 @@
   }
 }
 
-@mixin header-size-xxxl {
-  font-size: 4vw;
-  line-height: 1;
-
+@mixin header-size-display {
+  font-size: 8vw;
+  line-height: 1.1;
   @media #{$mobile} {
-    font-size: 64px;
-    line-height: 72px;
+  font-size: 10vw;
+  line-height: 1.1;
   }
 }
 
@@ -119,7 +118,7 @@
   p, div { @include header-size-xxl; }
 }
 
-.header-size-xxxl {
-  @include header-size-xxxl;
-  p, div { @include header-size-xxxl; }
+.header-size-display {
+  @include header-size-display;
+  p, div { @include header-size-display; }
 }

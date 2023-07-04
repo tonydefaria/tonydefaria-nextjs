@@ -9,7 +9,7 @@ import Image from "next/image"
 import MetaComponent from "../components/meta_component"
 
 // Layout
-import Layout from "../layouts/primary"
+import Layout from "../layouts/landing"
 
 export default function Index({projectData, sectionData}) {
   // Props
@@ -29,9 +29,6 @@ export default function Index({projectData, sectionData}) {
       <div className="hero">
         <div className="hero-box">
           <div className="hero-row">
-            <h1 className="header-size-xxl text-align-center">{hero.title}</h1>
-          </div>
-          <div className="hero-row">
             <figure>
               <picture>
                 <Image
@@ -47,6 +44,9 @@ export default function Index({projectData, sectionData}) {
               </picture>
               <figcaption>{hero.caption}</figcaption>
             </figure>
+          </div>
+          <div className="hero-row">
+            <h1 className="header-size-display text-align-center">{hero.title}</h1>
           </div>
           <div className="hero-row">
             <p className="font-weight-700 text-align-center">{hero.description}</p>
