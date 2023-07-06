@@ -5,15 +5,15 @@
 $class: "social-networks";
 
 .#{$class} {
-  float: right;
+  float: left;
+  width: 100%;
   .#{$class}-box {
     float: left;
-    padding: 16px 16px 0;
+    padding: 16px;
     width: auto;
     .#{$class}-item {
       float: left;
-      margin: 0;
-      padding: 16px 16px 0;
+      padding: 16px;
     }
   }
 }
@@ -22,7 +22,6 @@ $class: "social-networks";
 // -------------------------------------------------------------
 @media #{$mobile} {
   .#{$class} {
-    width: 100%;
     .#{$class}-box {
       padding: 8px;
       .#{$class}-item {

@@ -50,6 +50,7 @@ export default function MenuComponent({project}) {
             </Link>
           </li>
         </ul>
+        <hr className="separator-xxl" />
         <ul className="menu-box flex-h-center">
           <SocialNetworksComponent social_networks={social_networks} />
         </ul>

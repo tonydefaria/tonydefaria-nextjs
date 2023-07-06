@@ -6,21 +6,14 @@ $class: "legal";
 
 .#{$class} {
   float: left;
+  width: 100%;
   .#{$class}-box {
     float: left;
     padding: 0 16px 16px;
     width: auto;
     .#{$class}-item {
       float: left;
-      margin: 0;
       padding: 0 16px 16px;
-      &:first-child {
-        padding-left: 16px;
-      }
-      &:last-child {
-        padding-right: 16px;
-      }
-      .link-xs { line-height: 32px; }
     }
   }
 }
@@ -29,18 +22,10 @@ $class: "legal";
 // -------------------------------------------------------------
 @media #{$mobile} {
   .#{$class} {
-    width: 100%;
     .#{$class}-box {
       padding: 0 8px 8px;
       .#{$class}-item {
         padding: 0 8px 8px;
-        &:first-child {
-          padding-left: 8px;
-        }
-        &:last-child {
-          padding-right: 8px;
-        }
-        .link-xs { line-height: 32px; }
       }
     }
   }
