@@ -48,11 +48,13 @@ export default function Index({projectData, sectionData}) {
           <div className="hero-row">
             <h1 className="header-size-display text-align-center">{hero.title}</h1>
           </div>
-          <div className="hero-row">
-            <p className="font-weight-700 text-align-center">{hero.description}</p>
-            <hr className="separator-s" />
-            <div className="width-wide flex-h-center">
-              <Link href="/about" className="link-s underline link-blue-black" onClick={() => { trackCTACabin(); }}>{hero.cta_label}</Link>
+          <div className="hero-row flex-h-center">
+            <div className="width-with-max">
+              <p className="font-weight-700 text-align-center">{hero.description}</p>
+              <hr className="separator-s" />
+              <div className="width-wide flex-h-center">
+                <Link href="/about" className="link-s underline link-blue-black" onClick={() => { trackCTACabin(); }}>{hero.cta_label}</Link>
+              </div>
             </div>
           </div>
         </div>
