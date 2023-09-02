@@ -10,12 +10,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001523",
+    "caniuse-lite": "^1.0.30001525",
     "headroom.js": "^0.12.0",
-    "html-react-parser": "^4.2.1",
+    "html-react-parser": "^4.2.2",
     "next": "13.4.19",
     "next-sitemap": "^4.2.2",
-    "npm-check-updates": "^16.13.1",
+    "npm-check-updates": "^16.13.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sanitize-html": "^2.11.0",
@@ -24,7 +24,7 @@
     "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
-    "eslint": "8.47.0",
+    "eslint": "8.48.0",
     "eslint-config-next": "13.4.19"
   }
 }
