@@ -1,4 +1,4 @@
-// About
+// About Page
 
 // Built-in Components
 import React, { useContext, useState, useEffect } from "react"
@@ -13,18 +13,20 @@ import ImageBlockComponent from "../components/blocks/image_block_component"
 // Layout
 import Layout from "../layouts/primary"
 
-export default function About({projectData, sectionData}) {
+export default function About({ projectData, sectionData }) {
   // Props
   const project = projectData.project
   const meta = sectionData.section.meta_tag
-  const hero = sectionData.section.blocks.find(({uid}) => uid === "3DucbePbPn3BEjxpK3Ad1dd3")
+  const hero = sectionData.section.blocks.find(({ uid }) => uid === "3DucbePbPn3BEjxpK3Ad1dd3")
 
   const blocks = sectionData.section.blocks
-  const filterBlocks = blocks.filter(({type_of}) => type_of !== ("hero" || "gallery"))
+  // Filter out hero and gallery blocks
+  const filterBlocks = blocks.filter(({ type_of }) => type_of !== "hero" && type_of !== "gallery")
 
   // Effect
-  useEffect(() => {
-  }, [])
+  // useEffect(() => {
+    // Any side effects can be added here
+  // }, [])
 
   return (
     <div className="page">
@@ -48,15 +50,27 @@ export default function About({projectData, sectionData}) {
         <div className="content-box">
           {/* Blocks */}
           {filterBlocks.map((block, index) => {
+            // Determine alignment class
+            let setAlignment
+            if (block.align === "left") {
+              setAlignment = "float-left"
+            } else if (block.align === "center") {
+              setAlignment = "flex-h-center"
+            } else if (block.align === "right") {
+              setAlignment = "float-right"
+            }
+
+            // Set the block component based on its type
             let setBlock
             if (block.type_of === "text") {
-              setBlock = <TextBlockComponent block={block} />
+              setBlock = <TextBlockComponent block={block} setAlignment={setAlignment} />
             } else if (block.type_of === "image") {
               setBlock = <ImageBlockComponent block={block} />
             }
+
             return (
               <div key={block.uid} className="content-row writer-box">
-                <div className="content-inner float-right">
+                <div className={`content-inner ${setAlignment}`}>
                   {setBlock}
                 </div>
               </div>
@@ -68,35 +82,48 @@ export default function About({projectData, sectionData}) {
   )
 }
 
+// Fetch project and section data
 export async function getStaticProps() {
-  // Endpoint
-  const url = "https://hankyo-api-pro.herokuapp.com"
-
-  // Project
+  // API Endpoint
+  const apiUrl = "https://hankyo-api-pro.herokuapp.com"
   const projectToken = "ZjiAAoU4XpdbuFqLqGTZPR1VmfucM7ya62TV2Dej3DUGMsAG"
-  const projectReq = await fetch(`${url}/mies/project?project_token=${projectToken}`)
-  const projectData = await projectReq.json()
-
-  // Section
   const sectionUID = "3wbtGjsGzz9NqxySJBumk6fT"
-  const sectionReq = await fetch(`${url}/mies/project/sections/${sectionUID}?project_token=${projectToken}`)
-  const sectionData = await sectionReq.json()
 
-  if (!projectData) {
+  try {
+    // Fetch project data
+    const projectReq = await fetch(`${apiUrl}/mies/project?project_token=${projectToken}`)
+    const projectData = await projectReq.json()
+
+    // Fetch section data
+    const sectionReq = await fetch(`${apiUrl}/mies/project/sections/${sectionUID}?project_token=${projectToken}`)
+    const sectionData = await sectionReq.json()
+
+    if (!projectData) {
+      return {
+        redirect: {
+          destination: "/",
+          permanent: false,
+        },
+      }
+    }
+
     return {
-      redirect: {
-        destination: "/",
-        permanent: false,
+      props: {
+        projectData,
+        sectionData,
       },
     }
-  }
+  } catch (error) {
+    console.error("Error fetching data:", error)
 
-  return {
-    props: {
-      projectData,
-      sectionData
+    return {
+      props: {
+        projectData: null,
+        sectionData: null,
+      },
     }
   }
 }
 
+// Attach layout to the page
 About.Layout = Layout
