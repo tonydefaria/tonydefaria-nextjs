@@ -25,6 +25,9 @@ $class: "portraits";
           float: right;
         }
       }
+      &:last-child {
+        padding: 0 0 0px;
+      }
     }
     .#{$class}-item {
       float: left;
