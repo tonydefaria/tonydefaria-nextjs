@@ -79,6 +79,10 @@
   font-size: 9.5vw;
   line-height: 1.1;
   }
+  // Keep font size within scale and not exceed main placeholder viewpoint.
+  @media screen and (min-width: 1200px) {
+    font-size: 144px;
+  }
 }
 
 // Classes
