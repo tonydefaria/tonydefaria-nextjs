@@ -17,7 +17,8 @@
 .header {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  background-color: rgba(243, 243, 244, .9);
+  // background-color: rgba(243, 243, 244, .9);
+  background-color: rgba(247, 247, 248, .9);
   left: 0;
   padding: 0;
   position: fixed;
@@ -31,11 +32,18 @@
   padding: 144px 0px;
 }
 
+.footer {
+  padding: 0 0 32px;
+}
+
 // Mobile
 // -------------------------------------------------------------
 @media #{$mobile} {
   .main {
     min-height: calc(100vh - 128px);
     padding: 96px 0;
+  }
+  .footer {
+    padding: 0 0 16px;
   }
 }

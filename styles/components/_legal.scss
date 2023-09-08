@@ -13,7 +13,7 @@ $class: "legal";
     width: auto;
     .#{$class}-item {
       float: left;
-      padding: 0 16px 16px;
+      padding: 8px 16px 16px;
     }
   }
 }
@@ -25,7 +25,7 @@ $class: "legal";
     .#{$class}-box {
       padding: 0 8px 8px;
       .#{$class}-item {
-        padding: 0 8px 8px;
+        padding: 4px 8px 8px;
       }
     }
   }
