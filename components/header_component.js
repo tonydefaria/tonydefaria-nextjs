@@ -1,29 +1,29 @@
 // Header Component
 
 // Built-in components
-import React, { useContext, useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import Headroom from "headroom.js"
 
 // Components
 import BrandComponent from "./brand_component"
 import HamburgerComponent from "./hamburger_component"
-import ShopComponent from "./shop_component"
 import MenuComponent from "../components/menu_component"
 
 // Context
 export const menuToggleContext = React.createContext()
 
-export default function HeaderComponent({project}) {
+export default function HeaderComponent({ project }) {
   // State
   const [isOpen, setIsOpen] = useState(false)
 
   // Effect
   useEffect(() => {
-    // Headroom.js
-    let element = document.querySelector("header")
-    let headroom = new Headroom(element)
+    // Initialize Headroom.js for the header element
+    const headerElement = document.querySelector("header")
+    const headroom = new Headroom(headerElement)
     headroom.init()
 
+    // Toggle scroll classes based on isOpen state
     const scrolls = document.querySelectorAll(".lock-menu")
     if (!isOpen) {
       for (const scroll of scrolls) {
@@ -36,14 +36,13 @@ export default function HeaderComponent({project}) {
         scroll.classList.add("noscroll")
       }
     }
-  }, [isOpen, setIsOpen])
+  }, [isOpen])
 
   return (
     <menuToggleContext.Provider value={[isOpen, setIsOpen]}>
       <header className="universal header" id="header">
         <BrandComponent />
         <HamburgerComponent />
-        {/* <ShopComponent /> */}
         <MenuComponent project={project} />
       </header>
     </menuToggleContext.Provider>

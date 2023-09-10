@@ -1,36 +1,21 @@
-// Landing
+// Landing Layout
 
 // Built-in Components
-import React, { useEffect } from "react";
-import smoothscroll from "smoothscroll-polyfill";
+import React, { useEffect } from "react"
 
 // Components
-import FaviconComponent from "../components/favicon_component";
-import HeaderComponent from "../components/header_component";
-import FooterComponent from "../components/footer_component";
+import FaviconComponent from "../components/favicon_component"
+import HeaderComponent from "../components/header_component"
+import FooterComponent from "../components/footer_component"
 
 export default function Landing({ children, projectData }) {
-  // Enable smooth scrolling polyfill for improved scrolling behavior
-  useEffect(() => {
-    smoothscroll.polyfill();
-
-    // Add a click event listener for smooth scrolling when clicking on certain elements
-    document.addEventListener("click", e => {
-      const target = e.target;
-      if (!target.classList.contains("js-smooth-scroll")) return; // Exit if the clicked element doesn't have the smooth-scroll class
-      e.preventDefault();
-      const targetId = target.hash;
-      const targetElement = document.querySelector(targetId);
-      const rectTop = targetElement.getBoundingClientRect().top;
-      const offsetTop = window.pageYOffset;
-      // Calculate the target scroll position for smooth scrolling
-      const top = rectTop + offsetTop;
-      window.scrollTo({ top, behavior: "smooth" });
-    });
-  }, []);
+  // useEffect(() => {
+  //   // Add any initialization code if needed
+  //   // This effect runs once when the component mounts
+  // }, [])
 
   // Extract project data from props
-  const project = projectData.project;
+  const project = projectData.project
 
   return (
     <div className="landing lock-menu scroll" id="landing">
@@ -45,5 +30,5 @@ export default function Landing({ children, projectData }) {
       {/* Footer */}
       <FooterComponent project={project} />
     </div>
-  );
+  )
 }
