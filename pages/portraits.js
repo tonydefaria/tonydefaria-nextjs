@@ -5,7 +5,7 @@ import React, { useEffect } from "react"
 import Image from "next/image"
 
 // Import Hankyo API client functions
-import { fetchProjectData, fetchSectionData } from "../lib/HankyoClient"
+import { fetchProject, fetchSection } from "../lib/hankyoClient"
 
 // Components
 import MetaComponent from "../components/meta_component"
@@ -107,8 +107,8 @@ export default function Portraits({ projectData, sectionData }) {
 export async function getStaticProps() {
   const sectionUID = "ETawPaEzkHn3LqmnoZNkH7JE"
   // Fetch project data and section data
-  const projectData = await fetchProjectData()
-  const sectionData = await fetchSectionData(sectionUID)
+  const projectData = await fetchProject()
+  const sectionData = await fetchSection(sectionUID)
 
   return {
     props: {

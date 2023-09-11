@@ -4,7 +4,7 @@
 import React, { useEffect } from "react"
 
 // Import Hankyo API client functions
-import { fetchProjectData, fetchSectionData } from "../lib/HankyoClient"
+import { fetchProject, fetchSection } from "../lib/hankyoClient"
 
 // Components
 import MetaComponent from "../components/meta_component"
@@ -75,8 +75,8 @@ export default function Disclaimer({ projectData, sectionData }) {
 export async function getStaticProps() {
   const sectionUID = "M6Gb8e2661hihv9CaWyKDGv5"
   // Fetch project data and section data
-  const projectData = await fetchProjectData()
-  const sectionData = await fetchSectionData(sectionUID)
+  const projectData = await fetchProject()
+  const sectionData = await fetchSection(sectionUID)
 
   return {
     props: {
