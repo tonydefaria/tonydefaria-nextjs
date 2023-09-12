@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001532",
+    "caniuse-lite": "^1.0.30001533",
     "headroom.js": "^0.12.0",
     "html-react-parser": "^4.2.2",
     "next": "13.4.19",
