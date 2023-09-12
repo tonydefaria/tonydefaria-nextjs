@@ -107,7 +107,7 @@ picture {
   float: left;
   height: auto;
   margin: 0;
-  padding: 16px;
+  padding: 12px;
   width: 100%;
 }
 
@@ -145,7 +145,7 @@ span {
 // -------------------------------------------------------------
 @media #{$mobile} {
   picture {
-    padding: 12px;
+    padding: 8px;
   }
 }
 

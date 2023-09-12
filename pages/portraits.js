@@ -4,7 +4,7 @@
 // // // // // // // // // // // // //
 
 // Import built-in Next.js components and libraries
-import React, { useEffect } from "react"
+import React from "react"
 import Image from "next/image"
 
 // Import Hankyo API client functions
@@ -17,21 +17,6 @@ import MetaComponent from "../components/meta_component";
 import Layout from "../layouts/primary";
 
 export default function Portraits({project, section, sectionMeta, sectionHero, sectionImages}) {
-
-  // Effect
-  useEffect(() => {
-    let getImages = document.querySelectorAll("img.portraits-orientation")
-    getImages.forEach(function (elem) {
-      const grandParent = elem.parentNode.parentNode.parentNode
-      if (elem.naturalWidth > elem.naturalHeight) {
-        grandParent.classList.add("landscape")
-      } else if (elem.naturalWidth < elem.naturalHeight) {
-        grandParent.classList.add("portrait")
-      } else {
-        grandParent.classList.add("square")
-      }
-    })
-  }, [])
 
   return (
     <Layout project={project}>
@@ -73,7 +58,7 @@ export default function Portraits({project, section, sectionMeta, sectionHero, s
 
               return (
                 <div className={`portraits-row ${setAlignment}`} key={image.uid}>
-                  <div className={`portraits-item`}>
+                  <div className={`portraits-item ${image.orientation}`}>
                     <figure>
                       <picture>
                         <Image
@@ -85,7 +70,7 @@ export default function Portraits({project, section, sectionMeta, sectionHero, s
                           sizes="(max-width: 959px) 75vw, (min-width: 960px) 65vw, 100vw"
                           alt={`Tony de Faria - Portrait - ${image.uid}`}
                           title="Tony de Faria"
-                          className="portraits-orientation"
+                          className={`${image.orientation}`}
                         />
                       </picture>
                       <figcaption>{image.caption}</figcaption>
