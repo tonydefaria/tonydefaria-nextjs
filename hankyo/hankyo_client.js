@@ -1,7 +1,7 @@
 // Hankyo API Client
 
 // Import Hankyo API client config
-import { baseUrl, projectToken } from "./hankyoConfig";
+import { baseUrl, projectToken } from "../hankyo/hankyo_config";
 
 /**
  * Function to fetch project data.

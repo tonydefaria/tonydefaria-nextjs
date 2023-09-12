@@ -6,8 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Import Hankyo API client functions
-import { fetchProject, fetchSection } from "../lib/hankyoClient";
-import { extractData } from "../lib/hankyoUtils";
+import { fetchProject, fetchSection } from "../hankyo/hankyo_client";
+import { extractData } from "../hankyo/hankyo_utils";
 
 // Import custom components
 import MetaComponent from "../components/meta_component";

@@ -1,7 +1,7 @@
 // Hankyo Utils
 
 // Import the helper function to find section heroes
-import { findSectionHeroBlocks } from "./resources/sections/sectionHero";
+import { findSectionHeroBlocks } from "../hankyo/resources/sections/section_hero";
 
 /**
  * Extracts data from project and section information.

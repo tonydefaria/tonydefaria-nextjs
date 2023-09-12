@@ -4,7 +4,7 @@
 import React, { useEffect } from "react"
 
 // Import Hankyo API client functions
-import { fetchProject, fetchSection } from "../lib/hankyoClient"
+import { fetchProject, fetchSection } from "../hankyo/hankyo_client";
 
 // Import custom components
 import MetaComponent from "../components/meta_component"
