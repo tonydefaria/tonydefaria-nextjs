@@ -1,47 +1,39 @@
 // Contact Page
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
 
 // Import built-in Next.js components and libraries
-import React, { useEffect } from "react"
+import React from "react";
 
 // Import Hankyo API client functions
 import { fetchProject, fetchSection } from "../hankyo/hankyo_client";
 
-// Components
-import MetaComponent from "../components/meta_component"
+// Import custom components
+import MetaComponent from "../components/meta_component";
 
-// Layout
+// Import the layout
 import Layout from "../layouts/primary"
 
-export default function Contact({ projectData, sectionData }) {
-  // Props
-  const project = projectData.project
-  const meta = sectionData.section.meta_tag
-  const hero = sectionData.section.blocks.find(({ uid }) => uid === "97jSqZqqUvzZmFeZH3rPXSa3")
-  const global_email = projectData.project.global_attributes.find(({ name }) => name === "email")
-  const social_networks = projectData.project.social_networks
-
-  // Effect
-  useEffect(() => {
-    // Any side effects can be added here
-  }, [])
-
+export default function Contact({project, projectEmail, section, sectionMeta, sectionHero}) {
+  console.log(sectionHero)
   return (
-    <Layout projectData={projectData}>
+    <Layout project={project}>
       <div className="page">
         {/* Meta */}
-        <MetaComponent project={project} meta={meta} />
+        <MetaComponent project={project} meta={sectionMeta} />
 
         {/* Hero */}
         <div className="hero">
           <div className="hero-box">
             <div className="hero-row">
-              <h1 className="header-size-display">{hero.title}</h1>
+              <h1 className="header-size-display">{sectionHero.title}</h1>
             </div>
             <div className="hero-column">
-              <p className="font-weight-700">{hero.description}</p>
+              <p className="font-weight-700">{sectionHero.description}</p>
               <hr className="separator-xxl" />
               <p className="font-size-xs">Email:</p>
-              <p className="font-size-s font-weight-900">{global_email.value}</p>
+              <p className="font-size-s font-weight-900">{projectEmail.value}</p>
             </div>
           </div>
         </div>
@@ -50,17 +42,40 @@ export default function Contact({ projectData, sectionData }) {
   )
 }
 
-// Fetch data using getStaticProps
 export async function getStaticProps() {
-  const sectionUID = "9tbaxmgFMVHCNBQv1FNyxbph"
-  // Fetch project data and section data
-  const projectData = await fetchProject()
-  const sectionData = await fetchSection(sectionUID)
+  // Set the section UID
+  const sectionUID = "9tbaxmgFMVHCNBQv1FNyxbph";
 
-  return {
-    props: {
-      projectData,
-      sectionData,
-    },
+  try {
+    // Fetch project data and section data
+    const projectData = await fetchProject();
+    const sectionData = await fetchSection(sectionUID);
+    const project = projectData.project;
+    const section = sectionData.section;
+
+    // Project attributes & blocks
+    const projectEmail = project.global_attributes.find(({ name }) => name === "email")
+
+    // Section attributes & blocks
+    const sectionMeta = section.meta_tag;
+    const sectionHero = section.blocks.find(({ uid }) => uid === "97jSqZqqUvzZmFeZH3rPXSa3");
+
+    // Return the options as props
+    return {
+      props: {
+        project,
+        projectEmail,
+        section,
+        sectionMeta,
+        sectionHero,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+
+    // Return an empty object or handle the error as needed
+    return {
+      props: {},
+    };
   }
 }

@@ -1,4 +1,7 @@
 // Portraits Page
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
 
 // Import built-in Next.js components and libraries
 import React, { useEffect } from "react"
@@ -7,18 +10,13 @@ import Image from "next/image"
 // Import Hankyo API client functions
 import { fetchProject, fetchSection } from "../hankyo/hankyo_client";
 
-// Components
-import MetaComponent from "../components/meta_component"
+// Import custom components
+import MetaComponent from "../components/meta_component";
 
-// Layout
-import Layout from "../layouts/primary"
+// Import the layout
+import Layout from "../layouts/primary";
 
-export default function Portraits({ projectData, sectionData }) {
-  // Props
-  const project = projectData.project
-  const meta = sectionData.section.meta_tag
-  const hero = sectionData.section.blocks.find(({ uid }) => uid === "sHhk1Za3CSKpThi2X8eYDo1z")
-  const images = sectionData.section.blocks.filter((image) => image.type_of === "image")
+export default function Portraits({project, section, sectionMeta, sectionHero, sectionImages}) {
 
   // Effect
   useEffect(() => {
@@ -36,19 +34,19 @@ export default function Portraits({ projectData, sectionData }) {
   }, [])
 
   return (
-    <Layout projectData={projectData}>
+    <Layout project={project}>
       <div className="page">
         {/* Meta */}
-        <MetaComponent project={project} meta={meta} />
+        <MetaComponent project={project} meta={sectionMeta} />
 
         {/* Hero */}
         <div className="hero">
           <div className="hero-box">
             <div className="hero-row">
-              <h1 className="header-size-display">{hero.title}</h1>
+              <h1 className="header-size-display">{sectionHero.title}</h1>
             </div>
             <div className="hero-column">
-              <p className="font-weight-700">{hero.description}</p>
+              <p className="font-weight-700">{sectionHero.description}</p>
             </div>
           </div>
         </div>
@@ -56,7 +54,7 @@ export default function Portraits({ projectData, sectionData }) {
         <div className="portraits">
           <div className="portraits-box">
             {/* Portraits */}
-            {images.map((image, index) => {
+            {sectionImages.map((image, index) => {
               let setPriority
               if (index <= 2) {
                 setPriority = true
@@ -103,17 +101,37 @@ export default function Portraits({ projectData, sectionData }) {
   )
 }
 
-// Fetch data using getStaticProps
 export async function getStaticProps() {
-  const sectionUID = "ETawPaEzkHn3LqmnoZNkH7JE"
-  // Fetch project data and section data
-  const projectData = await fetchProject()
-  const sectionData = await fetchSection(sectionUID)
+  // Set the section UID
+  const sectionUID = "ETawPaEzkHn3LqmnoZNkH7JE";
 
-  return {
-    props: {
-      projectData,
-      sectionData,
-    }
+  try {
+    // Fetch project data and section data
+    const projectData = await fetchProject();
+    const sectionData = await fetchSection(sectionUID);
+    const project = projectData.project;
+    const section = sectionData.section;
+
+    // Section attributes & blocks
+    const sectionMeta = section.meta_tag;
+    const sectionHero = section.blocks.find(({ uid }) => uid === "sHhk1Za3CSKpThi2X8eYDo1z");
+    const sectionImages = section.blocks.filter((image) => image.type_of === "image")
+
+    return {
+      props: {
+        project,
+        section,
+        sectionMeta,
+        sectionHero,
+        sectionImages,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+
+    // Return an empty object or handle the error as needed
+    return {
+      props: {},
+    };
   }
 }

@@ -1,4 +1,7 @@
-// Index
+// Index Page
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
 
 // Import built-in Next.js components and libraries
 import React from "react";
@@ -7,7 +10,6 @@ import Image from "next/image";
 
 // Import Hankyo API client functions
 import { fetchProject, fetchSection } from "../hankyo/hankyo_client";
-import { extractData } from "../hankyo/hankyo_utils";
 
 // Import custom components
 import MetaComponent from "../components/meta_component";
@@ -15,9 +17,7 @@ import MetaComponent from "../components/meta_component";
 // Import the layout
 import Layout from "../layouts/landing";
 
-export default function Index({ projectData, sectionData, sectionHeroBlocks }) {
-  // Access individual section heroes by UID
-  const sectionHero = sectionHeroBlocks["wqq2dxdWkWsqRwjWAbiCEpbx"];
+export default function Index({project, section, sectionMeta, sectionHero}) {
 
   // Function to track Cabin events
   const trackCTACabin = () => {
@@ -25,10 +25,10 @@ export default function Index({ projectData, sectionData, sectionHeroBlocks }) {
   };
 
   return (
-    <Layout projectData={projectData}>
+    <Layout project={project}>
       <div className="page" id="top">
         {/* Meta information */}
-        <MetaComponent project={projectData.project} meta={sectionData.section.meta_tag} />
+        <MetaComponent project={project} meta={sectionMeta} />
 
         {/* Hero section */}
         <div className="hero">
@@ -82,29 +82,36 @@ export default function Index({ projectData, sectionData, sectionHeroBlocks }) {
   );
 }
 
-// Fetch data using getStaticProps
 export async function getStaticProps() {
+  // Set the section UID
   const sectionUID = "4MDntMTiDVcR9P8vUtvr2eKz";
 
-  // Fetch project data and section data
-  const projectData = await fetchProject();
-  const sectionData = await fetchSection(sectionUID);
+  try {
+    // Fetch project data and section data
+    const projectData = await fetchProject();
+    const sectionData = await fetchSection(sectionUID);
+    const project = projectData.project;
+    const section = sectionData.section;
 
-  // Specify the UIDs of the hero blocks you want to find
-  const sectionHeroBlockUIDs = ["wqq2dxdWkWsqRwjWAbiCEpbx"];
+    // Section attributes & blocks
+    const sectionMeta = section.meta_tag;
+    const sectionHero = section.blocks.find(({ uid }) => uid === "wqq2dxdWkWsqRwjWAbiCEpbx");
 
-  // Extract sectionHeroBlocks data
-  const sectionHeroBlocks = extractData(
-    projectData,
-    sectionData,
-    sectionHeroBlockUIDs
-  ).sectionHeroBlocks
+    return {
+      props: {
+        project,
+        section,
+        sectionMeta,
+        sectionHero,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
 
-  return {
-    props: {
-      projectData,
-      sectionData,
-      sectionHeroBlocks,
-    },
-  };
+    // Return an empty object or handle the error as needed
+    return {
+      props: {},
+    };
+  }
 }
+
