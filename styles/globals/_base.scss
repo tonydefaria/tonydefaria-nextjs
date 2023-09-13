@@ -240,7 +240,7 @@ span {
   /* Add this CSS to your stylesheet */
 .lightbox-image {
   opacity: 0; /* Initially hide the image */
-  transition: opacity 0.250s ease-in-out; /* Add a smooth transition effect */
+  transition: opacity 1s ease-in-out; /* Add a smooth transition effect */
 }
 
 .lightbox-image.show {
