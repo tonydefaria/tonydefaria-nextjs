@@ -25,17 +25,6 @@ export default function Portraits({ project, section, sectionMeta, sectionHero, 
     setLightboxIndex(null);
   };
 
-  // Define the handleSwipeLeft and handleSwipeRight functions
-  const handleSwipeLeft = () => {
-    const newIndex = lightboxIndex > 0 ? lightboxIndex - 1 : sectionImages.length - 1;
-    setLightboxIndex(newIndex);
-  };
-
-  const handleSwipeRight = () => {
-    const newIndex = lightboxIndex < sectionImages.length - 1 ? lightboxIndex + 1 : 0;
-    setLightboxIndex(newIndex);
-  };
-
   return (
     <Layout project={project}>
       {/* ... your existing code ... */}
