@@ -26,7 +26,7 @@ const Lightbox = ({ images, currentIndex, onClose }) => {
     // Use setTimeout to delay showing the image by 1 second (1000 milliseconds)
     const delayToShowImage = setTimeout(() => {
       setShowImage(true);
-    }, 125);
+    }, 0);
 
     return () => {
       clearTimeout(delayToShowImage);
