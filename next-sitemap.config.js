@@ -7,7 +7,7 @@ module.exports = {
   priority: 0.8,
   sitemapSize: 5000,
   generateRobotsTxt: true,
-  exclude: [],
+  exclude: ["/gallery"],
   alternateRefs: [],
   // Default transformation function
   transform: async (config, path) => {
@@ -33,7 +33,8 @@ module.exports = {
           "/layouts",
           "/pages",
           "/styles",
-          "/svgs"
+          "/svgs",
+          "/gallery/",
         ]
       }
     ]
