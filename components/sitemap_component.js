@@ -1,7 +1,10 @@
 // Sitemap Component
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
 
-// Built-in components
-import React, { useContext, useState, useEffect } from "react"
+// Import built-in Next.js components and libraries
+import React from "react"
 import Link from "next/link"
 
 export default function SitemapComponent() {

@@ -1,9 +1,12 @@
 // Footer Component
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
 
-// Built-in components
+// Import built-in Next.js components and libraries
 import React, { useContext, useState, useEffect } from "react"
 
-// Components
+// Import custom components
 import SitemapComponent from "../components/sitemap_component"
 import SocialNetworksComponent from "../components/social_networks_component"
 import CopyrightComponent from "../components/copyright_component"

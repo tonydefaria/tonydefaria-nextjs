@@ -7,7 +7,7 @@ module.exports = {
   priority: 0.8,
   sitemapSize: 5000,
   generateRobotsTxt: true,
-  exclude: ["/gallery"],
+  exclude: [],
   alternateRefs: [],
   // Default transformation function
   transform: async (config, path) => {
@@ -24,6 +24,18 @@ module.exports = {
       {
         userAgent: "*",
         allow: "/"
+      },
+      {
+        userAgent: "GPTBot",
+        disallow: "/"
+      },
+      {
+        userAgent: "ChatGPT-User",
+        disallow: "/"
+      },
+      {
+        userAgent: "CCbot",
+        disallow: "/"
       },
       {
         userAgent: "*",

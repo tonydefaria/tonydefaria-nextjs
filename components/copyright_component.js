@@ -1,6 +1,9 @@
 // Copyright Component
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
 
-// Built-in components
+// Import built-in Next.js components and libraries
 import React, { useContext, useState, useEffect } from "react"
 
 export default function CopyrightComponent() {

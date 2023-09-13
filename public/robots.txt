@@ -10,7 +10,6 @@ Disallow: /layouts
 Disallow: /pages
 Disallow: /styles
 Disallow: /svgs
-Disallow: /gallery/
 
 # Host
 Host: https://www.tonydefaria.com

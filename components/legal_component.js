@@ -1,6 +1,9 @@
 // Legal Component
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
 
-// Built-in components
+// Import built-in Next.js components and libraries
 import React, { useContext, useState, useEffect } from "react"
 import Link from "next/link"
 

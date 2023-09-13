@@ -1,6 +1,9 @@
 // Favicon Component
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
 
-// Built-in Components
+// Import built-in Next.js components and libraries
 import Head from "next/head"
 
 export default function FaviconComponent({project}) {

@@ -1,10 +1,13 @@
 // Social Networks Component
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
+// // // // // // // // // // // // //
 
-// Built-in components
+// Import built-in Next.js components and libraries
 import Image from "next/image"
 
 export default function SocialNetworksComponent({social_networks}) {
-  // Cabin Events
+  // Track the event in Cabin
   const trackSocialNetworkCabin = () => { window.cabin.event("Social Network") }
 
   return (
