@@ -58,7 +58,7 @@ export default function Portraits({project, section, sectionMeta, sectionHero, s
 
               return (
                 <div className={`portraits-row ${setAlignment}`} key={image.uid}>
-                  <div className={`portraits-item ${image.orientation}`}>
+                  <div className={`portraits-item ${image.image_orientation}`}>
                     <figure>
                       <picture>
                         <Image
@@ -70,7 +70,7 @@ export default function Portraits({project, section, sectionMeta, sectionHero, s
                           sizes="(max-width: 959px) 75vw, (min-width: 960px) 65vw, 100vw"
                           alt={`Tony de Faria - Portrait - ${image.uid}`}
                           title="Tony de Faria"
-                          className={`${image.orientation}`}
+                          className={`${image.image_orientation}`}
                         />
                       </picture>
                       <figcaption>{image.caption}</figcaption>
