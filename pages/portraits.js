@@ -17,7 +17,6 @@ import MetaComponent from "../components/meta_component";
 import Layout from "../layouts/primary";
 
 export default function Portraits({project, section, sectionMeta, sectionHero, sectionImages}) {
-
   return (
     <Layout project={project}>
       <div className="page">

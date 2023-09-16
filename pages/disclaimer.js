@@ -20,7 +20,6 @@ import ImageBlockComponent from "../components/blocks/image_block_component";
 import Layout from "../layouts/primary";
 
 export default function Disclaimer({project, section, sectionMeta, sectionHero, sectionBlocks}) {
-
   return (
     <Layout project={project}>
       <div className="page">

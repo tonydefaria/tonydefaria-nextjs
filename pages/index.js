@@ -18,7 +18,6 @@ import MetaComponent from "../components/meta_component";
 import Layout from "../layouts/landing";
 
 export default function Index({project, section, sectionMeta, sectionHero}) {
-
   // Function to track Cabin events
   const trackCTACabin = () => {
     window.cabin.event("Landing Page CTA");

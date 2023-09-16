@@ -16,7 +16,6 @@ import MetaComponent from "../components/meta_component";
 import Layout from "../layouts/primary"
 
 export default function Contact({project, projectEmail, section, sectionMeta, sectionHero}) {
-  console.log(sectionHero)
   return (
     <Layout project={project}>
       <div className="page">
