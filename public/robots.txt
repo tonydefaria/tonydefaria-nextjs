@@ -2,6 +2,18 @@
 User-agent: *
 Allow: /
 
+# GPTBot
+User-agent: GPTBot
+Disallow: /
+
+# ChatGPT-User
+User-agent: ChatGPT-User
+Disallow: /
+
+# CCbot
+User-agent: CCbot
+Disallow: /
+
 # *
 User-agent: *
 Disallow: /builders
@@ -10,6 +22,7 @@ Disallow: /layouts
 Disallow: /pages
 Disallow: /styles
 Disallow: /svgs
+Disallow: /gallery/
 
 # Host
 Host: https://www.tonydefaria.com
