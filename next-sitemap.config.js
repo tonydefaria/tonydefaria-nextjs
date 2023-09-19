@@ -26,18 +26,6 @@ module.exports = {
         allow: "/"
       },
       {
-        userAgent: "GPTBot",
-        disallow: "/"
-      },
-      {
-        userAgent: "ChatGPT-User",
-        disallow: "/"
-      },
-      {
-        userAgent: "CCbot",
-        disallow: "/"
-      },
-      {
         userAgent: "*",
         disallow: [
           "/builders",
