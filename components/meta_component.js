@@ -29,8 +29,11 @@ export default function MetaComponent({ project, meta }) {
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={url} />
       <meta name="author" content={author} />
+      <link rel="canonical" href={url} />
+
+      {/* Application */}
+      <meta name="application-name" content={project.title}/>
 
       {/* Open Graph */}
       <meta property="og:type" content={typeOf} />
@@ -47,7 +50,7 @@ export default function MetaComponent({ project, meta }) {
       <meta name="twitter:image" content={image} />
 
       {/* Pinterest */}
-      <meta name="p:domain_verify" content="4798813e2e3fdec2ffbb1fae9109b056" />
+      {/* <meta name="p:domain_verify" content="4798813e2e3fdec2ffbb1fae9109b056" /> */}
 
       {/* Preloaders */}
       <link rel="dns-prefetch" href="https://use.typekit.net/sjv6gba.css" />

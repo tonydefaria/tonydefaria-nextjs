@@ -2,18 +2,6 @@
 User-agent: *
 Allow: /
 
-# GPTBot
-User-agent: GPTBot
-Disallow: /
-
-# ChatGPT-User
-User-agent: ChatGPT-User
-Disallow: /
-
-# CCbot
-User-agent: CCbot
-Disallow: /
-
 # *
 User-agent: *
 Disallow: /builders
