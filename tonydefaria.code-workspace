@@ -15,6 +15,7 @@
     },
     "editor.codeLens": false,
     "editor.hover.enabled": false,
+    "editor.minimap.enabled": false,
     "editor.suggest.showColors": false,
     "editor.suggest.showConstants": false,
     "editor.suggest.showConstructors": false,
@@ -40,6 +41,8 @@
     "editor.suggest.showUnits": false,
     "editor.suggest.showUsers": false,
     "editor.suggest.showVariables": false,
-    "editor.suggest.showWords": false
+    "editor.suggest.showWords": false,
+    "emmet.showAbbreviationSuggestions": false,
+    "emmet.showExpandedAbbreviation": "never",
   }
 }

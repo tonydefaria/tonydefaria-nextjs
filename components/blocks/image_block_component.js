@@ -14,8 +14,8 @@ export default function ImageBlockComponent({block}) {
         <picture>
           <Image
             src={block.image}
-            width={block.width}
-            height={block.height}
+            width={block.image_width}
+            height={block.image_height}
             quality={100}
             alt={`Tony de Faria - Image Block - ${block.uid}`}
             title="Tony de Faria"

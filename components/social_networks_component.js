@@ -18,8 +18,8 @@ export default function SocialNetworksComponent({social_networks}) {
             <a href={social_network.url} target="_blank" rel="me noreferrer noopener" className="link-s underline" onClick={trackSocialNetworkCabin}>
               <Image
                 src={social_network.image}
-                width={social_network.width}
-                height={social_network.height}
+                width={social_network.image_width}
+                height={social_network.image_height}
                 quality={100}
                 priority="true"
                 // sizes="(max-width: 959px) 100vw, (min-width: 960px) 100vw, 100vw"

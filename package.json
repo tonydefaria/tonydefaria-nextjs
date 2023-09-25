@@ -10,20 +10,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001534",
+    "caniuse-lite": "^1.0.30001539",
     "headroom.js": "^0.12.0",
     "html-react-parser": "^4.2.2",
-    "lightgallery": "^2.7.1",
-    "next": "13.4.19",
+    "lightgallery": "^2.7.2",
+    "next": "13.5.2",
     "next-sitemap": "^4.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sanitize-html": "^2.11.0",
-    "sass": "^1.67.0",
-    "sharp": "^0.32.5"
+    "sass": "^1.68.0",
+    "sharp": "^0.32.6"
   },
   "devDependencies": {
-    "eslint": "8.49.0",
-    "eslint-config-next": "13.4.19"
+    "eslint": "8.50.0",
+    "eslint-config-next": "13.5.2"
   }
 }

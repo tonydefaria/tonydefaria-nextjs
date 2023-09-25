@@ -62,8 +62,8 @@ export default function Portraits({project, section, sectionMeta, sectionHero, s
                       <picture>
                         <Image
                           src={image.image}
-                          width={image.width}
-                          height={image.height}
+                          width={image.image_width}
+                          height={image.image_height}
                           quality={75}
                           priority={setPriority}
                           sizes="(max-width: 959px) 75vw, (min-width: 960px) 65vw, 100vw"

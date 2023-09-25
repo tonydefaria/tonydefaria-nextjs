@@ -61,8 +61,8 @@ export default function Index({project, section, sectionMeta, sectionHero}) {
                   {/* Hero image */}
                   <Image
                     src={sectionHero.image}
-                    width={sectionHero.width}
-                    height={sectionHero.height}
+                    width={sectionHero.image_width}
+                    height={sectionHero.image_height}
                     quality={75}
                     priority={true}
                     sizes="(max-width: 959px) 75vw, (min-width: 960px) 65vw, 100vw"
