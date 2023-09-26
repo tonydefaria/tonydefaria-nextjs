@@ -33,7 +33,7 @@ export default function MetaComponent({ project, meta }) {
       <link rel="canonical" href={url} />
 
       {/* Application */}
-      <meta name="application-name" content={project.title}/>
+      <meta name="application-name" content={title}/>
 
       {/* Open Graph */}
       <meta property="og:type" content={typeOf} />
