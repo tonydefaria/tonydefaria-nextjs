@@ -6,7 +6,7 @@
 // Import built-in Next.js components and libraries
 import Head from "next/head"
 
-export default function FaviconComponent({project}) {
+export default function FaviconComponent() {
   return (
     <Head>
       {/* Favicon */}
