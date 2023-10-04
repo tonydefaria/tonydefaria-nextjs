@@ -34,8 +34,7 @@
 html,
 body {
   @include font-size-m;
-  background-color: $black-000;
-  // background-color: #f7f7f8;
+  background-color: rgba(248, 249, 249, 1);
   color: $black-900;
   font-display: swap;
   font-family: $sans;
