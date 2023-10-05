@@ -56,7 +56,7 @@ export async function getStaticProps() {
     const projectEmail = project.global_attributes.find(({ name }) => name === "email")
 
     // Section attributes & blocks
-    const sectionMeta = section.meta_tag;
+    const sectionMeta = section.metadata;
     const sectionHero = section.blocks.find(({ uid }) => uid === "97jSqZqqUvzZmFeZH3rPXSa3");
 
     // Return the options as props

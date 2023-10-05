@@ -93,7 +93,7 @@ export async function getStaticProps() {
     const section = sectionData.section;
 
     // Section attributes & blocks
-    const sectionMeta = section.meta_tag;
+    const sectionMeta = section.metadata;
     const sectionHero = section.blocks.find(({ uid }) => uid === "wqq2dxdWkWsqRwjWAbiCEpbx");
 
     return {
