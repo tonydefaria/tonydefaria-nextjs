@@ -10,19 +10,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001546",
+    "caniuse-lite": "^1.0.30001561",
     "headroom.js": "^0.12.0",
-    "html-react-parser": "^4.2.2",
-    "next": "13.5.4",
+    "html-react-parser": "^5.0.6",
+    "next": "14.0.2",
     "next-sitemap": "^4.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sanitize-html": "^2.11.0",
-    "sass": "^1.68.0",
+    "sass": "^1.69.5",
     "sharp": "^0.32.6"
   },
   "devDependencies": {
-    "eslint": "8.50.0",
-    "eslint-config-next": "13.5.4"
+    "eslint": "8.53.0",
+    "eslint-config-next": "14.0.2"
   }
 }

@@ -4,7 +4,14 @@ const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   images: {
-    domains: ["hankyo-production.fra1.cdn.digitaloceanspaces.com"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'hankyo-production.fra1.cdn.digitaloceanspaces.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
     deviceSizes: [240, 360, 480, 640, 750, 828, 960, 1080, 1200, 1440, 1920, 2048, 3840],
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60,
